@@ -2,6 +2,7 @@ import { FormEvent, useMemo, useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { http } from '../api/http';
 import { formatInt, formatMoney, formatQty } from '../lib/numberFormat';
+import { selectAllOnFocus } from '../lib/inputHelpers';
 import type { Product } from '../types';
 
 type LotItem = {
@@ -48,6 +49,10 @@ export function StockPage() {
   const { data: categories } = useQuery({
     queryKey: ['cfg-categories'],
     queryFn: () => http<any[]>('/api/config/categories'),
+  });
+  const { data: suppliers } = useQuery({
+    queryKey: ['cfg-suppliers'],
+    queryFn: () => http<any[]>('/api/config/suppliers'),
   });
 
   const selectedProduct = useMemo(() => products?.find((p) => p.id === selectedProductId), [products, selectedProductId]);
@@ -154,15 +159,26 @@ export function StockPage() {
           </label>
           <label className="text-sm">
             <div className="mb-1">Proveedor</div>
-            <input className="input" value={supplier} onChange={(e) => setSupplier(e.target.value)} placeholder="Nombre proveedor" />
+            <input
+              className="input"
+              list="stock-suppliers"
+              value={supplier}
+              onChange={(e) => setSupplier(e.target.value)}
+              placeholder="Nombre proveedor"
+            />
+            <datalist id="stock-suppliers">
+              {suppliers?.map((s) => (
+                <option key={s.id} value={s.name} />
+              ))}
+            </datalist>
           </label>
           <label className="text-sm">
             <div className="mb-1">Logística Lote (USD)</div>
-            <input className="input" type="number" value={logisticsUsd} onChange={(e) => setLogisticsUsd(Number(e.target.value))} placeholder="0" />
+            <input className="input" type="number" value={logisticsUsd} onFocus={selectAllOnFocus} onChange={(e) => setLogisticsUsd(Number(e.target.value))} placeholder="0" />
           </label>
           <label className="text-sm">
             <div className="mb-1">Cotización (ARS/USD)</div>
-            <input className="input" type="number" value={exchangeRateArs} onChange={(e) => setExchangeRateArs(Number(e.target.value))} placeholder="1450" />
+            <input className="input" type="number" value={exchangeRateArs} onFocus={selectAllOnFocus} onChange={(e) => setExchangeRateArs(Number(e.target.value))} placeholder="1450" />
           </label>
         </div>
         <label className="text-sm block">
@@ -193,15 +209,15 @@ export function StockPage() {
             </label>
             <label className="text-sm">
               <div className="mb-1">Cantidad</div>
-              <input className="input" type="number" value={qty} onChange={(e) => setQty(Number(e.target.value))} placeholder="0" />
+              <input className="input" type="number" value={qty} onFocus={selectAllOnFocus} onChange={(e) => setQty(Number(e.target.value))} placeholder="0" />
             </label>
             <label className="text-sm">
               <div className="mb-1">Costo compra (USD)</div>
-              <input className="input" type="number" value={purchaseUnitCostUsd} onChange={(e) => setPurchaseUnitCostUsd(Number(e.target.value))} placeholder="0" />
+              <input className="input" type="number" value={purchaseUnitCostUsd} onFocus={selectAllOnFocus} onChange={(e) => setPurchaseUnitCostUsd(Number(e.target.value))} placeholder="0" />
             </label>
             <label className="text-sm">
               <div className="mb-1">Margen (%)</div>
-              <input className="input" type="number" value={marginPercent} onChange={(e) => setMarginPercent(Number(e.target.value))} placeholder="80" />
+              <input className="input" type="number" value={marginPercent} onFocus={selectAllOnFocus} onChange={(e) => setMarginPercent(Number(e.target.value))} placeholder="80" />
             </label>
           </div>
           <button className="btn-secondary" type="button" onClick={addItem}>Agregar al lote</button>
@@ -241,7 +257,7 @@ export function StockPage() {
             <option value="">Producto</option>
             {products?.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
           </select>
-          <input className="input" type="number" value={outQty} onChange={(e) => setOutQty(Number(e.target.value))} placeholder="Cantidad" />
+          <input className="input" type="number" value={outQty} onFocus={selectAllOnFocus} onChange={(e) => setOutQty(Number(e.target.value))} placeholder="Cantidad" />
           <input className="input" value={outReason} onChange={(e) => setOutReason(e.target.value)} placeholder="Motivo" required />
           <button className="btn-primary">Registrar baja</button>
         </form>
@@ -252,7 +268,7 @@ export function StockPage() {
             <option value="">Producto</option>
             {products?.map((p) => <option key={p.id} value={p.id}>{p.name}</option>)}
           </select>
-          <input className="input" type="number" value={adjustQty} onChange={(e) => setAdjustQty(Number(e.target.value))} placeholder="Ajuste (+/-)" />
+          <input className="input" type="number" value={adjustQty} onFocus={selectAllOnFocus} onChange={(e) => setAdjustQty(Number(e.target.value))} placeholder="Ajuste (+/-)" />
           <input className="input" value={adjustReason} onChange={(e) => setAdjustReason(e.target.value)} placeholder="Motivo" required />
           <button className="btn-primary">Registrar ajuste</button>
         </form>

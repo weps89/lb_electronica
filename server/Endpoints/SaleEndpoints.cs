@@ -62,6 +62,7 @@ public static class SaleEndpoints
                 product.UpdatedAt = DateTime.UtcNow;
 
                 var unitPriceArs = PricingService.FinalArs(product, request.PaymentMethod, arsRate);
+                var costPriceArs = Math.Round(product.CostPrice * PricingService.EffectiveRate(product, arsRate), 2);
                 var rowSubtotal = unitPriceArs * item.Qty;
                 subtotal += rowSubtotal;
                 discount += item.Discount;
@@ -73,6 +74,7 @@ public static class SaleEndpoints
                     UnitPrice = unitPriceArs,
                     Discount = item.Discount,
                     CostPriceSnapshot = product.CostPrice,
+                    CostPriceSnapshotArs = costPriceArs,
                     SalePriceSnapshot = unitPriceArs,
                     ImeiOrSerial = item.ImeiOrSerial
                 });

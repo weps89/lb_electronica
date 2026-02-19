@@ -66,6 +66,40 @@ public static class UserEndpoints
             return Results.Ok();
         });
 
+        group.MapPut("/{id:int}", async (int id, UpdateUserRequest request, AppDbContext db, PasswordService passwordService, AuditService auditService, HttpContext ctx) =>
+        {
+            var user = await db.Users.FindAsync(id);
+            if (user is null) return Results.NotFound();
+
+            var oldRole = user.Role;
+            user.Role = request.Role;
+
+            var changedPassword = !string.IsNullOrWhiteSpace(request.NewPassword);
+            if (changedPassword)
+            {
+                user.PasswordHash = passwordService.Hash(request.NewPassword!);
+                user.ForcePasswordChange = true;
+            }
+
+            user.UpdatedAt = DateTime.UtcNow;
+            await db.SaveChangesAsync();
+            await auditService.LogAsync(
+                ctx.User.UserId(),
+                "USER_UPDATE",
+                "User",
+                user.Id.ToString(),
+                $"Role {oldRole}=>{user.Role}; PasswordChanged: {changedPassword}");
+
+            return Results.Ok(new
+            {
+                user.Id,
+                user.Username,
+                role = user.Role.ToString(),
+                user.IsActive,
+                user.ForcePasswordChange
+            });
+        });
+
         group.MapPatch("/{id:int}/active", async (int id, bool active, AppDbContext db, AuditService auditService, HttpContext ctx) =>
         {
             var user = await db.Users.FindAsync(id);

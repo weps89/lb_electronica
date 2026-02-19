@@ -2,6 +2,7 @@ import { useEffect, useMemo, useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { http } from '../api/http';
 import { formatMoney, formatQty } from '../lib/numberFormat';
+import { selectAllOnFocus } from '../lib/inputHelpers';
 import type { Product } from '../types';
 
 type CartItem = {
@@ -67,6 +68,7 @@ export function PosPage() {
         priceTransferArs: prices.transfer,
       }];
     });
+    setQ('');
   };
 
   const removeLine = (productId: number) => {
@@ -108,6 +110,9 @@ export function PosPage() {
       setWhatsapp(wa.url);
       setCart([]);
       setGlobalDiscount(0);
+      setQ('');
+      setQtyToAdd(1);
+      setPaymentMethod('Efectivo');
       setCustomerDni('');
       setCustomerName('');
       setCustomerPhone('');
@@ -165,6 +170,7 @@ export function PosPage() {
             min={1}
             step={1}
             value={qtyToAdd}
+            onFocus={selectAllOnFocus}
             onChange={(e) => setQtyToAdd(Number(e.target.value))}
             placeholder="Cantidad"
           />
@@ -236,7 +242,7 @@ export function PosPage() {
           </select>
           <div>
             <div className="text-sm text-slate-500 mb-1">Descuento total (no por producto)</div>
-            <input className="input" type="number" min={0} step="0.01" value={globalDiscount} onChange={(e) => setGlobalDiscount(Number(e.target.value) || 0)} />
+            <input className="input" type="number" min={0} step="0.01" value={globalDiscount} onFocus={selectAllOnFocus} onChange={(e) => setGlobalDiscount(Number(e.target.value) || 0)} />
           </div>
           {error && <div className="text-sm text-red-700">{error}</div>}
           <div className="rounded-xl border border-sky-300 bg-gradient-to-b from-sky-100 to-cyan-200 px-4 py-5">

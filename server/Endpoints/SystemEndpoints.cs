@@ -19,10 +19,23 @@ public static class SystemEndpoints
 
             if (ctx.User.IsAdmin())
             {
-                var todaySales = await db.Sales.Where(x => x.Date >= todayStart && x.Date <= todayEnd).SumAsync(x => (decimal?)x.Total) ?? 0;
-                var expenses = await db.CashMovements.Where(x => x.CreatedAt >= todayStart && x.CreatedAt <= todayEnd && x.Type == CashMovementType.Expense).SumAsync(x => (decimal?)x.Amount) ?? 0;
-                var gross = await db.SaleItems.Include(x => x.Sale).Where(x => x.Sale!.Date >= todayStart && x.Sale.Date <= todayEnd)
-                    .SumAsync(x => (decimal?)((x.SalePriceSnapshot - x.CostPriceSnapshot) * x.Qty)) ?? 0;
+                var paidSales = await db.Sales
+                    .Where(x => x.Date >= todayStart && x.Date <= todayEnd && x.Status != SaleStatus.Cancelled)
+                    .Select(x => new { x.Id, x.Total })
+                    .ToListAsync();
+                var todaySales = paidSales.Sum(x => x.Total);
+                var expenses = (await db.CashMovements
+                    .Where(x => x.CreatedAt >= todayStart && x.CreatedAt <= todayEnd && x.Type == CashMovementType.Expense)
+                    .Select(x => x.Amount)
+                    .ToListAsync()).Sum();
+                var saleItems = await db.SaleItems
+                    .Where(x => paidSales.Select(s => s.Id).Contains(x.SaleId))
+                    .Select(x => new { x.SaleId, x.Qty, x.CostPriceSnapshotArs, x.CostPriceSnapshot })
+                    .ToListAsync();
+                var costMap = saleItems
+                    .GroupBy(x => x.SaleId)
+                    .ToDictionary(g => g.Key, g => g.Sum(x => (x.CostPriceSnapshotArs > 0 ? x.CostPriceSnapshotArs : x.CostPriceSnapshot) * x.Qty));
+                var gross = paidSales.Sum(s => s.Total - costMap.GetValueOrDefault(s.Id, 0m));
 
                 return Results.Ok(new
                 {

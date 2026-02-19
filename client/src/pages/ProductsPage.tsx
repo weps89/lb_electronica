@@ -2,6 +2,7 @@ import { FormEvent, useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { http } from '../api/http';
 import { formatMoney, formatQty } from '../lib/numberFormat';
+import { selectAllOnFocus } from '../lib/inputHelpers';
 import type { Product } from '../types';
 
 const empty = {
@@ -31,10 +32,10 @@ export function ProductsPage() {
         <input className="input" placeholder="Código de barras" value={form.barcode} onChange={e => setForm({ ...form, barcode: e.target.value })} />
         <input className="input" placeholder="Categoría" value={form.category} onChange={e => setForm({ ...form, category: e.target.value })} />
         <input className="input" placeholder="Marca" value={form.brand} onChange={e => setForm({ ...form, brand: e.target.value })} />
-        <input className="input" type="number" placeholder="Costo" value={form.costPrice} onChange={e => setForm({ ...form, costPrice: Number(e.target.value) })} />
-        <input className="input" type="number" placeholder="Margen %" value={form.marginPercent} onChange={e => setForm({ ...form, marginPercent: Number(e.target.value) })} />
-        <input className="input" type="number" placeholder="Precio venta" value={form.salePrice} onChange={e => setForm({ ...form, salePrice: Number(e.target.value) })} />
-        <input className="input" type="number" placeholder="Stock" value={form.stockQuantity} onChange={e => setForm({ ...form, stockQuantity: Number(e.target.value) })} />
+        <input className="input" type="number" placeholder="Costo" value={form.costPrice} onFocus={selectAllOnFocus} onChange={e => setForm({ ...form, costPrice: Number(e.target.value) })} />
+        <input className="input" type="number" placeholder="Margen %" value={form.marginPercent} onFocus={selectAllOnFocus} onChange={e => setForm({ ...form, marginPercent: Number(e.target.value) })} />
+        <input className="input" type="number" placeholder="Precio venta" value={form.salePrice} onFocus={selectAllOnFocus} onChange={e => setForm({ ...form, salePrice: Number(e.target.value) })} />
+        <input className="input" type="number" placeholder="Stock" value={form.stockQuantity} onFocus={selectAllOnFocus} onChange={e => setForm({ ...form, stockQuantity: Number(e.target.value) })} />
         <button className="btn-primary md:col-span-4" type="submit">Agregar producto</button>
       </form>
       <div className="card overflow-auto">

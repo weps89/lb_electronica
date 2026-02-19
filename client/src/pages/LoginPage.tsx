@@ -4,8 +4,8 @@ import { http } from '../api/http';
 import { useAuth } from '../lib/auth';
 
 export function LoginPage() {
-  const [username, setUsername] = useState('admin');
-  const [password, setPassword] = useState('admin123!');
+  const [username, setUsername] = useState('');
+  const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const navigate = useNavigate();
   const { refresh } = useAuth();
@@ -25,8 +25,12 @@ export function LoginPage() {
   return (
     <div className="min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-slate-200 via-white to-teal-100">
       <form onSubmit={submit} className="card w-full max-w-md space-y-3">
-        <div className="flex justify-center">
-          <img src="/logo_lb.png" alt="LB Electronica" className="h-16 w-auto object-contain" />
+        <div className="flex justify-center overflow-hidden rounded-xl border border-slate-200 bg-white p-1">
+          <img
+            src="/logo_lb_login.png"
+            alt="LB Electronica"
+            className="h-24 w-full object-contain"
+          />
         </div>
         <h1 className="text-2xl font-semibold">LB Electronica</h1>
         <p className="text-sm text-slate-500">Inventario y ventas local</p>

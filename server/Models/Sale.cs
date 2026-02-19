@@ -36,6 +36,7 @@ public class SaleItem
     public decimal UnitPrice { get; set; }
     public decimal Discount { get; set; }
     public decimal CostPriceSnapshot { get; set; }
+    public decimal CostPriceSnapshotArs { get; set; }
     public decimal SalePriceSnapshot { get; set; }
     public string? ImeiOrSerial { get; set; }
 }

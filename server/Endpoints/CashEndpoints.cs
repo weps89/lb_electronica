@@ -288,6 +288,7 @@ public static class CashEndpoints
                 .Include(x => x.Movements)
                 .FirstOrDefaultAsync(x => x.UserId == uid && x.IsOpen);
             if (session is null) return Results.BadRequest(new { message = "No se encontró una sesión abierta" });
+            if (request.CountedCash < 0) return Results.BadRequest(new { message = "El efectivo contado no puede ser negativo" });
 
             var incomes = session.Movements
                 .Where(x => x.Type == CashMovementType.Income &&
@@ -303,7 +304,23 @@ public static class CashEndpoints
             session.IsOpen = false;
 
             await db.SaveChangesAsync();
-            return Results.Ok(session);
+            return Results.Ok(new
+            {
+                session.Id,
+                session.UserId,
+                session.OpenedAt,
+                session.ClosedAt,
+                session.OpeningAmount,
+                session.ExpectedCash,
+                session.CountedCash,
+                session.Difference,
+                session.IsOpen,
+                totals = new
+                {
+                    incomes,
+                    expenses
+                }
+            });
         });
 
         group.MapGet("/my-day", async (DateTime? date, AppDbContext db, HttpContext ctx) =>
@@ -351,6 +368,12 @@ public static class CashEndpoints
                 pendingInvoices = pendingCount,
                 salesTotal = sales.Sum(x => x.Total),
                 paymentBreakdown = sales.GroupBy(x => x.PaymentMethod.ToString()).ToDictionary(g => g.Key, g => g.Sum(x => x.Total)),
+                cashSalesTotal = sales.Where(x => x.PaymentMethod == PaymentMethod.Cash).Sum(x => x.Total),
+                cardSalesTotal = sales.Where(x => x.PaymentMethod == PaymentMethod.Card).Sum(x => x.Total),
+                transferSalesTotal = sales.Where(x => x.PaymentMethod == PaymentMethod.Transfer).Sum(x => x.Total),
+                cashSalesCount = sales.Count(x => x.PaymentMethod == PaymentMethod.Cash),
+                cardSalesCount = sales.Count(x => x.PaymentMethod == PaymentMethod.Card),
+                transferSalesCount = sales.Count(x => x.PaymentMethod == PaymentMethod.Transfer),
                 incomes = cashMovements
                     .Where(x => x.Type == CashMovementType.Income &&
                                 (x.Category == null || !x.Category.StartsWith("VENTA:") || x.Category == "VENTA:Cash"))

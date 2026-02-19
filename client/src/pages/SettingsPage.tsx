@@ -1,6 +1,7 @@
 import { FormEvent, useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { http } from '../api/http';
+import { selectAllOnFocus } from '../lib/inputHelpers';
 
 type Customer = { id: number; dni: string; name?: string; phone?: string; active: boolean };
 type Supplier = { id: number; name: string; taxId?: string; phone?: string; address?: string; active: boolean };
@@ -152,7 +153,7 @@ export function SettingsPage() {
           </div>
           <form className="card space-y-2" onSubmit={saveRate}>
             <h2 className="font-semibold">Actualizar cotización del día</h2>
-            <input className="input" type="number" step="0.0001" min="0.0001" placeholder="Ej: 1450" value={exchangeRate} onChange={(e) => setExchangeRate(e.target.value)} required />
+            <input className="input" type="number" step="0.0001" min="0.0001" placeholder="Ej: 1450" value={exchangeRate} onFocus={selectAllOnFocus} onChange={(e) => setExchangeRate(e.target.value)} required />
             <button className="btn-primary">Guardar cotización</button>
           </form>
         </div>

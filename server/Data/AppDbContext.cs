@@ -67,6 +67,10 @@ public class AppDbContext(DbContextOptions<AppDbContext> options) : DbContext(op
             .Property(x => x.Discount)
             .HasPrecision(18, 2);
 
+        modelBuilder.Entity<SaleItem>()
+            .Property(x => x.CostPriceSnapshotArs)
+            .HasPrecision(18, 2);
+
         modelBuilder.Entity<ExchangeRate>()
             .Property(x => x.ArsPerUsd)
             .HasPrecision(18, 4);

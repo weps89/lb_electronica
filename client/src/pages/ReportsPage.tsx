@@ -4,6 +4,20 @@ import { http } from '../api/http';
 import { formatInt, formatMoney, formatQty } from '../lib/numberFormat';
 
 type ReportType = 'cash' | 'sales-detailed' | 'lot' | 'annulments' | 'utilities-monthly';
+const MONTH_OPTIONS = [
+  { value: 1, label: 'ENERO' },
+  { value: 2, label: 'FEBRERO' },
+  { value: 3, label: 'MARZO' },
+  { value: 4, label: 'ABRIL' },
+  { value: 5, label: 'MAYO' },
+  { value: 6, label: 'JUNIO' },
+  { value: 7, label: 'JULIO' },
+  { value: 8, label: 'AGOSTO' },
+  { value: 9, label: 'SEPTIEMBRE' },
+  { value: 10, label: 'OCTUBRE' },
+  { value: 11, label: 'NOVIEMBRE' },
+  { value: 12, label: 'DICIEMBRE' },
+];
 
 export function ReportsPage() {
   const [type, setType] = useState<ReportType>('cash');
@@ -82,7 +96,9 @@ export function ReportsPage() {
             </div>
             <div>
               <label className="text-xs text-slate-600">Mes</label>
-              <input className="input" type="number" min={1} max={12} value={month} onChange={(e) => setMonth(Number(e.target.value))} />
+              <select className="input" value={month} onChange={(e) => setMonth(Number(e.target.value))}>
+                {MONTH_OPTIONS.map((m) => <option key={m.value} value={m.value}>{m.label}</option>)}
+              </select>
             </div>
           </>
         )}
@@ -232,7 +248,11 @@ export function ReportsPage() {
             <h2 className="font-semibold">Reporte de Utilidades</h2>
             <a className="btn-secondary" href={`/api/reports/utilities-monthly/pdf?year=${year}&month=${month}`} target="_blank">Exportar PDF</a>
           </div>
-          <div className="grid md:grid-cols-3 gap-2">
+          <div className="grid md:grid-cols-4 gap-2">
+            <div className="rounded-xl border border-violet-200 bg-violet-50 p-3">
+              <div className="text-xs uppercase tracking-wide text-violet-800">Capital recuperado</div>
+              <div className="text-2xl font-semibold text-violet-900">$ {formatMoney(utilities.data?.capitalRecovered)}</div>
+            </div>
             <div className="rounded-xl border border-emerald-200 bg-emerald-50 p-3">
               <div className="text-xs uppercase tracking-wide text-emerald-800">Utilidad bruta</div>
               <div className="text-2xl font-semibold text-emerald-900">$ {formatMoney(utilities.data?.grossProfit)}</div>
@@ -245,6 +265,9 @@ export function ReportsPage() {
               <div className="text-xs uppercase tracking-wide text-sky-800">Utilidad neta</div>
               <div className="text-2xl font-semibold text-sky-900">$ {formatMoney(utilities.data?.netProfit)}</div>
             </div>
+          </div>
+          <div className="text-xs text-slate-500">
+            Mes en curso: el cálculo toma datos acumulados hasta este momento.
           </div>
         </div>
       )}

@@ -5,6 +5,7 @@ namespace LBElectronica.Server.DTOs;
 public record LoginRequest(string Username, string Password);
 public record ChangePasswordRequest(string CurrentPassword, string NewPassword);
 public record CreateUserRequest(string Username, string Password, UserRole Role);
+public record UpdateUserRequest(UserRole Role, string? NewPassword);
 public record ResetPasswordRequest(int UserId, string NewPassword);
 public record ProductUpsertRequest(
     string? Barcode,

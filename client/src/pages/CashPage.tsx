@@ -1,6 +1,7 @@
 import { useMemo, useState } from 'react';
 import { useQuery, useQueryClient } from '@tanstack/react-query';
 import { http } from '../api/http';
+import { selectAllOnFocus } from '../lib/inputHelpers';
 
 type CollectMethod = 'Cash' | 'Card' | 'Transfer';
 
@@ -138,6 +139,8 @@ export function CashPage() {
         body: JSON.stringify({ openingAmount }),
       });
       setCashInfo('Caja abierta correctamente.');
+      setOpeningInput('0,00');
+      setExchangeRateInput('0,00');
       setShowOpenModal(false);
       await refreshAll();
     } catch (e: any) {
@@ -167,6 +170,7 @@ export function CashPage() {
       });
       setAmountInput('0,00');
       setReason('');
+      setExpenseCategory(EXPENSE_CATEGORIES[0]);
       setCashInfo(`${type} registrado.`);
       await refreshAll();
     } catch (e: any) {
@@ -183,6 +187,7 @@ export function CashPage() {
         body: JSON.stringify({ countedCash: countedAmount }),
       });
       setCashInfo('Caja cerrada.');
+      setCountedInput('0,00');
       await refreshAll();
     } catch (e: any) {
       setCashError(String(e?.message || 'No se pudo cerrar caja'));
@@ -236,7 +241,10 @@ export function CashPage() {
 
       setCashInfo(`Factura ${selectedInvoice.ticketNumber} cobrada.`);
       setSelectedId(null);
+      setCollectMethod('Cash');
+      setReceivedInput('0,00');
       setOperationNumber('');
+      setVerifyTransfer(true);
       await refreshAll();
     } catch (e: any) {
       setCashError(String(e?.message || 'No se pudo cobrar factura'));
@@ -297,6 +305,7 @@ export function CashPage() {
                 className="input"
                 inputMode="decimal"
                 value={amountInput}
+                onFocus={selectAllOnFocus}
                 onChange={(e) => setAmountInput(normalizeMoneyInput(e.target.value))}
                 onBlur={() => setAmountInput(formatMoney(movementAmount))}
                 placeholder="0,00"
@@ -324,6 +333,7 @@ export function CashPage() {
                 className="input"
                 inputMode="decimal"
                 value={countedInput}
+                onFocus={selectAllOnFocus}
                 onChange={(e) => setCountedInput(normalizeMoneyInput(e.target.value))}
                 onBlur={() => setCountedInput(formatMoney(countedAmount))}
                 placeholder="0,00"
@@ -402,6 +412,7 @@ export function CashPage() {
                       className="input"
                       inputMode="decimal"
                       value={receivedInput}
+                      onFocus={selectAllOnFocus}
                       onChange={(e) => setReceivedInput(normalizeMoneyInput(e.target.value))}
                       onBlur={() => setReceivedInput(formatMoney(receivedAmount))}
                       placeholder="0,00"
@@ -455,6 +466,23 @@ export function CashPage() {
             <div className="text-xl font-semibold">$ {formatMoney(Number(myDay?.expenses ?? 0))}</div>
           </div>
         </div>
+        <div className="grid md:grid-cols-3 gap-2 mt-2">
+          <div className="rounded-lg border border-emerald-200 bg-emerald-50 p-3">
+            <div className="text-xs text-emerald-700">Cobros efectivo</div>
+            <div className="text-lg font-semibold text-emerald-900">$ {formatMoney(Number(myDay?.cashSalesTotal ?? 0))}</div>
+            <div className="text-xs text-emerald-700">{intFormat.format(Number(myDay?.cashSalesCount ?? 0))} ventas</div>
+          </div>
+          <div className="rounded-lg border border-amber-200 bg-amber-50 p-3">
+            <div className="text-xs text-amber-700">Cobros tarjeta</div>
+            <div className="text-lg font-semibold text-amber-900">$ {formatMoney(Number(myDay?.cardSalesTotal ?? 0))}</div>
+            <div className="text-xs text-amber-700">{intFormat.format(Number(myDay?.cardSalesCount ?? 0))} ventas</div>
+          </div>
+          <div className="rounded-lg border border-sky-200 bg-sky-50 p-3">
+            <div className="text-xs text-sky-700">Cobros transferencia</div>
+            <div className="text-lg font-semibold text-sky-900">$ {formatMoney(Number(myDay?.transferSalesTotal ?? 0))}</div>
+            <div className="text-xs text-sky-700">{intFormat.format(Number(myDay?.transferSalesCount ?? 0))} ventas</div>
+          </div>
+        </div>
         <div className="text-xs text-slate-500 mt-3">
           El detalle por ventas y egresos está disponible en el módulo Reportes.
         </div>
@@ -477,7 +505,7 @@ export function CashPage() {
               />
             </div>
             <div className="flex justify-end gap-2">
-              <button className="btn-secondary" onClick={() => setAnnulTarget(null)}>Cancelar</button>
+              <button className="btn-secondary" onClick={() => { setAnnulReason(''); setAnnulTarget(null); }}>Cancelar</button>
               <button className="btn-primary !bg-red-600 hover:!bg-red-700" onClick={() => void confirmAnnul()}>Confirmar anulación</button>
             </div>
           </div>
@@ -494,6 +522,7 @@ export function CashPage() {
                 className="input"
                 inputMode="decimal"
                 value={openingInput}
+                onFocus={selectAllOnFocus}
                 onChange={(e) => setOpeningInput(normalizeMoneyInput(e.target.value))}
                 onBlur={() => setOpeningInput(formatMoney(openingAmount))}
                 placeholder="0,00"
@@ -505,12 +534,13 @@ export function CashPage() {
                 className="input"
                 inputMode="decimal"
                 value={exchangeRateInput}
+                onFocus={selectAllOnFocus}
                 onChange={(e) => setExchangeRateInput(normalizeMoneyInput(e.target.value))}
                 placeholder="0,00"
               />
             </div>
             <div className="flex justify-end gap-2">
-              <button className="btn-secondary" onClick={() => setShowOpenModal(false)}>Cancelar</button>
+              <button className="btn-secondary" onClick={() => { setOpeningInput('0,00'); setExchangeRateInput('0,00'); setShowOpenModal(false); }}>Cancelar</button>
               <button className="btn-primary" onClick={() => void open()}>Confirmar apertura</button>
             </div>
           </div>

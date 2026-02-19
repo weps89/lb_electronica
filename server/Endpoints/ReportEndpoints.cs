@@ -48,19 +48,34 @@ public static class ReportEndpoints
         group.MapGet("/profit", async (DateTime? startDate, DateTime? endDate, string? preset, AppDbContext db, DateRangeService dateRangeService) =>
         {
             var (start, end) = dateRangeService.Resolve(startDate, endDate, preset);
-            var saleItems = await db.SaleItems.Include(x => x.Sale).Where(x => x.Sale!.Date >= start && x.Sale.Date <= end && (x.Sale.Status == SaleStatus.Paid || x.Sale.Status == SaleStatus.Verified)).ToListAsync();
+            var sales = await db.Sales
+                .AsNoTracking()
+                .Where(x => x.Date >= start && x.Date <= end && x.Status != SaleStatus.Cancelled)
+                .Select(x => new { x.Id, x.Date, x.Total })
+                .ToListAsync();
+            var saleIds = sales.Select(x => x.Id).ToList();
+            var saleItems = await db.SaleItems
+                .AsNoTracking()
+                .Where(x => saleIds.Contains(x.SaleId))
+                .Select(x => new { x.SaleId, x.Qty, x.CostPriceSnapshotArs, x.CostPriceSnapshot })
+                .ToListAsync();
+            var costMap = saleItems
+                .GroupBy(x => x.SaleId)
+                .ToDictionary(g => g.Key, g => g.Sum(x => (x.CostPriceSnapshotArs > 0 ? x.CostPriceSnapshotArs : x.CostPriceSnapshot) * x.Qty));
             var expenses = (await db.CashMovements.Where(x => x.CreatedAt >= start && x.CreatedAt <= end && x.Type == CashMovementType.Expense).Select(x => x.Amount).ToListAsync()).Sum();
 
-            var gross = saleItems.Sum(x => (x.SalePriceSnapshot - x.CostPriceSnapshot) * x.Qty);
+            var capitalRecovered = sales.Sum(s => costMap.GetValueOrDefault(s.Id, 0m));
+            var gross = sales.Sum(s => s.Total) - capitalRecovered;
             var net = gross - expenses;
 
-            var daily = saleItems.GroupBy(x => x.Sale!.Date.Date).Select(g => new
+            var daily = sales.GroupBy(x => x.Date.Date).Select(g => new
             {
                 date = g.Key,
-                grossProfit = g.Sum(x => (x.SalePriceSnapshot - x.CostPriceSnapshot) * x.Qty)
+                capitalRecovered = g.Sum(s => costMap.GetValueOrDefault(s.Id, 0m)),
+                grossProfit = g.Sum(s => s.Total - costMap.GetValueOrDefault(s.Id, 0m))
             }).OrderBy(x => x.date);
 
-            return Results.Ok(new { start, end, grossProfit = gross, netProfit = net, expenses, daily });
+            return Results.Ok(new { start, end, capitalRecovered, grossProfit = gross, netProfit = net, expenses, daily });
         });
 
         group.MapGet("/sales", async (DateTime? startDate, DateTime? endDate, string? preset, AppDbContext db, DateRangeService dateRangeService) =>
@@ -196,16 +211,28 @@ public static class ReportEndpoints
             var y = year ?? now.Year;
             var m = month ?? now.Month;
             var start = new DateTime(y, m, 1);
-            var end = start.AddMonths(1).AddTicks(-1);
+            var endOfMonth = start.AddMonths(1).AddTicks(-1);
+            var endOfToday = now.Date.AddDays(1).AddTicks(-1);
+            var end = (y == now.Year && m == now.Month) ? endOfToday : endOfMonth;
 
+            var sales = await db.Sales
+                .AsNoTracking()
+                .Where(x => x.Date >= start && x.Date <= end && x.Status != SaleStatus.Cancelled)
+                .Select(x => new { x.Id, x.Total })
+                .ToListAsync();
+            var saleIds = sales.Select(x => x.Id).ToList();
             var saleItems = await db.SaleItems
                 .AsNoTracking()
-                .Include(x => x.Sale)
-                .Where(x => x.Sale!.Date >= start && x.Sale.Date <= end && (x.Sale.Status == SaleStatus.Paid || x.Sale.Status == SaleStatus.Verified))
+                .Where(x => saleIds.Contains(x.SaleId))
+                .Select(x => new { x.SaleId, x.Qty, x.CostPriceSnapshotArs, x.CostPriceSnapshot })
                 .ToListAsync();
-            var gross = saleItems.Sum(x => (x.SalePriceSnapshot - x.CostPriceSnapshot) * x.Qty);
+            var costMap = saleItems
+                .GroupBy(x => x.SaleId)
+                .ToDictionary(g => g.Key, g => g.Sum(x => (x.CostPriceSnapshotArs > 0 ? x.CostPriceSnapshotArs : x.CostPriceSnapshot) * x.Qty));
+            var capitalRecovered = sales.Sum(s => costMap.GetValueOrDefault(s.Id, 0m));
+            var gross = sales.Sum(s => s.Total) - capitalRecovered;
             var expenses = (await db.CashMovements.Where(x => x.CreatedAt >= start && x.CreatedAt <= end && x.Type == CashMovementType.Expense).Select(x => x.Amount).ToListAsync()).Sum();
-            return Results.Ok(new { year = y, month = m, grossProfit = gross, expenses, netProfit = gross - expenses });
+            return Results.Ok(new { year = y, month = m, capitalRecovered, grossProfit = gross, expenses, netProfit = gross - expenses });
         });
 
         group.MapGet("/income-expense-summary/pdf", async (DateTime? startDate, DateTime? endDate, string? preset, AppDbContext db, DateRangeService dateRangeService, PdfService pdf, HttpContext ctx) =>
@@ -249,24 +276,40 @@ public static class ReportEndpoints
         group.MapGet("/profit/pdf", async (DateTime? startDate, DateTime? endDate, string? preset, AppDbContext db, DateRangeService dateRangeService, PdfService pdf, HttpContext ctx) =>
         {
             var (start, end) = dateRangeService.Resolve(startDate, endDate, preset);
-            var saleItems = await db.SaleItems.Include(x => x.Sale).Include(x => x.Product).Where(x => x.Sale!.Date >= start && x.Sale.Date <= end).ToListAsync();
+            var sales = await db.Sales
+                .AsNoTracking()
+                .Where(x => x.Date >= start && x.Date <= end && x.Status != SaleStatus.Cancelled)
+                .OrderBy(x => x.Date)
+                .Select(x => new { x.Id, x.Date, x.TicketNumber, x.Total })
+                .ToListAsync();
+            var saleIds = sales.Select(x => x.Id).ToList();
+            var saleItems = await db.SaleItems
+                .AsNoTracking()
+                .Where(x => saleIds.Contains(x.SaleId))
+                .Select(x => new { x.SaleId, x.Qty, x.CostPriceSnapshotArs, x.CostPriceSnapshot })
+                .ToListAsync();
+            var costMap = saleItems
+                .GroupBy(x => x.SaleId)
+                .ToDictionary(g => g.Key, g => g.Sum(x => (x.CostPriceSnapshotArs > 0 ? x.CostPriceSnapshotArs : x.CostPriceSnapshot) * x.Qty));
             var expenses = (await db.CashMovements.Where(x => x.CreatedAt >= start && x.CreatedAt <= end && x.Type == CashMovementType.Expense).Select(x => x.Amount).ToListAsync()).Sum();
-            var gross = saleItems.Sum(x => (x.SalePriceSnapshot - x.CostPriceSnapshot) * x.Qty);
+            var capitalRecovered = sales.Sum(s => costMap.GetValueOrDefault(s.Id, 0m));
+            var gross = sales.Sum(s => s.Total) - capitalRecovered;
             var net = gross - expenses;
 
-            var rows = saleItems.Select(x => new List<string>
+            var rows = sales.Select(s => new List<string>
             {
-                x.Sale!.Date.ToString("dd/MM/yyyy"),
-                x.Product?.Name ?? "-",
-                x.Qty.ToString("0.##"),
-                ((x.SalePriceSnapshot - x.CostPriceSnapshot) * x.Qty).ToString("N2")
+                s.Date.ToString("dd/MM/yyyy"),
+                s.TicketNumber,
+                s.Total.ToString("N2"),
+                (s.Total - costMap.GetValueOrDefault(s.Id, 0m)).ToString("N2")
             }).ToList();
 
             rows.Add(new() { "", "Utilidad bruta", "", gross.ToString("N2") });
+            rows.Add(new() { "", "Capital recuperado", "", capitalRecovered.ToString("N2") });
             rows.Add(new() { "", "Gastos", "", expenses.ToString("N2") });
             rows.Add(new() { "", "Utilidad neta", "", net.ToString("N2") });
 
-            var bytes = pdf.TableReport("Reporte de Utilidad", new() { "Fecha", "Producto", "Cant.", "Utilidad" }, rows, start, end, ctx.User.Identity?.Name ?? "admin");
+            var bytes = pdf.TableReport("Reporte de Utilidad", new() { "Fecha", "Ticket", "Venta Neta", "Utilidad" }, rows, start, end, ctx.User.Identity?.Name ?? "admin");
             return Results.File(bytes, "application/pdf", "reporte-utilidad.pdf");
         });
 
@@ -360,27 +403,40 @@ public static class ReportEndpoints
             var y = year ?? now.Year;
             var m = month ?? now.Month;
             var start = new DateTime(y, m, 1);
-            var end = start.AddMonths(1).AddTicks(-1);
+            var endOfMonth = start.AddMonths(1).AddTicks(-1);
+            var endOfToday = now.Date.AddDays(1).AddTicks(-1);
+            var end = (y == now.Year && m == now.Month) ? endOfToday : endOfMonth;
 
-            var saleItems = await db.SaleItems
-                .Include(x => x.Sale)
-                .Include(x => x.Product)
-                .Where(x => x.Sale!.Date >= start && x.Sale.Date <= end && (x.Sale.Status == SaleStatus.Paid || x.Sale.Status == SaleStatus.Verified))
+            var sales = await db.Sales
+                .AsNoTracking()
+                .Where(x => x.Date >= start && x.Date <= end && x.Status != SaleStatus.Cancelled)
+                .OrderBy(x => x.Date)
+                .Select(x => new { x.Id, x.Date, x.TicketNumber, x.Total })
                 .ToListAsync();
-
-            var gross = saleItems.Sum(x => (x.SalePriceSnapshot - x.CostPriceSnapshot) * x.Qty);
+            var saleIds = sales.Select(x => x.Id).ToList();
+            var saleItems = await db.SaleItems
+                .AsNoTracking()
+                .Where(x => saleIds.Contains(x.SaleId))
+                .Select(x => new { x.SaleId, x.Qty, x.CostPriceSnapshotArs, x.CostPriceSnapshot })
+                .ToListAsync();
+            var costMap = saleItems
+                .GroupBy(x => x.SaleId)
+                .ToDictionary(g => g.Key, g => g.Sum(x => (x.CostPriceSnapshotArs > 0 ? x.CostPriceSnapshotArs : x.CostPriceSnapshot) * x.Qty));
+            var capitalRecovered = sales.Sum(s => costMap.GetValueOrDefault(s.Id, 0m));
+            var gross = sales.Sum(s => s.Total) - capitalRecovered;
             var expenses = (await db.CashMovements.Where(x => x.CreatedAt >= start && x.CreatedAt <= end && x.Type == CashMovementType.Expense).Select(x => x.Amount).ToListAsync()).Sum();
-            var rows = saleItems.Select(x => new List<string>
+            var rows = sales.Select(s => new List<string>
             {
-                x.Sale!.Date.ToString("dd/MM/yyyy"),
-                x.Product?.Name ?? "-",
-                x.Qty.ToString("0.##"),
-                ((x.SalePriceSnapshot - x.CostPriceSnapshot) * x.Qty).ToString("N2")
+                s.Date.ToString("dd/MM/yyyy"),
+                s.TicketNumber,
+                s.Total.ToString("N2"),
+                (s.Total - costMap.GetValueOrDefault(s.Id, 0m)).ToString("N2")
             }).ToList();
             rows.Add(new() { "", "UTILIDAD BRUTA", "", gross.ToString("N2") });
+            rows.Add(new() { "", "CAPITAL RECUPERADO", "", capitalRecovered.ToString("N2") });
             rows.Add(new() { "", "GASTOS", "", expenses.ToString("N2") });
             rows.Add(new() { "", "UTILIDAD NETA", "", (gross - expenses).ToString("N2") });
-            var bytes = pdf.TableReport("Reporte de Utilidades (Mensual)", new() { "Fecha", "Producto", "Cant.", "Utilidad" }, rows, start, end, ctx.User.Identity?.Name ?? "admin");
+            var bytes = pdf.TableReport("Reporte de Utilidades (Mensual)", new() { "Fecha", "Ticket", "Venta Neta", "Utilidad" }, rows, start, end, ctx.User.Identity?.Name ?? "admin");
             return Results.File(bytes, "application/pdf", "reporte-utilidades-mensual.pdf");
         });
 
