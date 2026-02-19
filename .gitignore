@@ -1,0 +1,9 @@
+client/node_modules/
+client/dist/
+server/bin/
+server/obj/
+publish/
+*.db
+*.db-shm
+*.db-wal
+*.log

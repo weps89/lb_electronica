@@ -1,0 +1,302 @@
+[
+  {
+    "product_name": "P47",
+    "qty": 55.0,
+    "cost_price": 7600.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "PAVA ELECTRICA",
+    "qty": 13.0,
+    "cost_price": 8000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "FRAPERA",
+    "qty": 2.0,
+    "cost_price": 27000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "MICROFONOLU-3241",
+    "qty": 7.0,
+    "cost_price": 9500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "MICROFONO LU3240",
+    "qty": 4.0,
+    "cost_price": 10310.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "TV BOX",
+    "qty": 11.0,
+    "cost_price": 35500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "DESTAOAVINO A PILAS",
+    "qty": 6.0,
+    "cost_price": 12700.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "MASAJEADOR ELECTRODOS",
+    "qty": 2.0,
+    "cost_price": 10500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "FOCO RGB ESTRELLAS",
+    "qty": 6.0,
+    "cost_price": 1800.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "LAVACOPAS",
+    "qty": 2.0,
+    "cost_price": 5500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "DESGRANADOR",
+    "qty": 2.0,
+    "cost_price": 8500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "PIEDRA DEPILADORA",
+    "qty": 3.0,
+    "cost_price": 5000.0,
+    "margin_percent": 77.77
+  },
+  {
+    "product_name": "PATILLERA",
+    "qty": 3.0,
+    "cost_price": 6500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "SOPORTE DE AUTO NFC",
+    "qty": 4.0,
+    "cost_price": 6500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "STEREOS",
+    "qty": 6.0,
+    "cost_price": 39000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "TECLADOS",
+    "qty": 5.0,
+    "cost_price": 5500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "GUANTES CON LUZ",
+    "qty": 4.0,
+    "cost_price": 5500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "ANAFE ELECTRICA",
+    "qty": 1.0,
+    "cost_price": 0,
+    "margin_percent": 0
+  },
+  {
+    "product_name": "TENSIOMETRO",
+    "qty": 1.0,
+    "cost_price": 17000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "MAQUINA DE PELO BROWNS",
+    "qty": 1.0,
+    "cost_price": 6000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "MAQUINA DE PELO DE BEBE",
+    "qty": 1.0,
+    "cost_price": 11500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "TERMO PEABODY",
+    "qty": 1.0,
+    "cost_price": 45000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "MAQUINA DE BOXEO",
+    "qty": 1.0,
+    "cost_price": 38000.0,
+    "margin_percent": 49.3
+  },
+  {
+    "product_name": "RELOJ NFC",
+    "qty": 1.0,
+    "cost_price": 0,
+    "margin_percent": 0
+  },
+  {
+    "product_name": "ASPIRADORA PORTATIL",
+    "qty": 1.0,
+    "cost_price": 9500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "VASOS CERVECEROS",
+    "qty": 18.0,
+    "cost_price": 5500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "REFLECTOR 50W RGB",
+    "qty": 2.0,
+    "cost_price": 7100.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "SOPORTE ARTICULADO",
+    "qty": 3.0,
+    "cost_price": 4500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "CAJA DE HERAMIENTAS",
+    "qty": 1.0,
+    "cost_price": 165000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "JBL GO 4",
+    "qty": 1.0,
+    "cost_price": 60000.0,
+    "margin_percent": 35.22
+  },
+  {
+    "product_name": "JBL FLIP 6",
+    "qty": 2.0,
+    "cost_price": 122700.0,
+    "margin_percent": 50.0
+  },
+  {
+    "product_name": "SAMSUNG A06",
+    "qty": 1.0,
+    "cost_price": 143000.0,
+    "margin_percent": 64.77
+  },
+  {
+    "product_name": "TIRAS LED RGB",
+    "qty": 5.0,
+    "cost_price": 6800.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "LUZ DE NEON",
+    "qty": 3.0,
+    "cost_price": 7500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "EP-2112 PARLANTE ECOPOWER",
+    "qty": 2.0,
+    "cost_price": 17000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "EP-2502 PARLANTE ECOPOWER",
+    "qty": 1.0,
+    "cost_price": 18698.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "EP-2384 PARLANTE ECOPOWER",
+    "qty": 1.0,
+    "cost_price": 16783.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "GREATNICE GTS 1681",
+    "qty": 1.0,
+    "cost_price": 10000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "GTS-1942 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 10500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "GTS-1835 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 10500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "MS-2207 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 8000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "HYTOSHY-1302 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 9500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "HF-186 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 8000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "GTS-2166 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 10166.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "PARLANTE G",
+    "qty": 2.0,
+    "cost_price": 8000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "PIZARRA MAGICA",
+    "qty": 3.0,
+    "cost_price": 3160.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "JOYSTOCK P CELULAR",
+    "qty": 7.0,
+    "cost_price": 3500.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "CAMARA SEGURIDAD INTERIOR",
+    "qty": 1.0,
+    "cost_price": 33000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "ECOPOWER 2266",
+    "qty": 1.0,
+    "cost_price": 68000.0,
+    "margin_percent": 80.0
+  },
+  {
+    "product_name": "BATTERYPACK",
+    "qty": 10.0,
+    "cost_price": 18200.0,
+    "margin_percent": 87.32
+  }
+]

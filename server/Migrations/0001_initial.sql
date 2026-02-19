@@ -1,0 +1,130 @@
+CREATE TABLE IF NOT EXISTS Users (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Username TEXT NOT NULL UNIQUE,
+    PasswordHash TEXT NOT NULL,
+    Role INTEGER NOT NULL,
+    IsActive INTEGER NOT NULL,
+    ForcePasswordChange INTEGER NOT NULL,
+    CreatedAt TEXT NOT NULL,
+    UpdatedAt TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS Products (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    InternalCode TEXT NOT NULL UNIQUE,
+    Barcode TEXT NULL UNIQUE,
+    Name TEXT NOT NULL,
+    Category TEXT NULL,
+    Brand TEXT NULL,
+    Model TEXT NULL,
+    ImeiOrSerial TEXT NULL,
+    CostPrice TEXT NOT NULL,
+    MarginPercent TEXT NOT NULL,
+    SalePrice TEXT NOT NULL,
+    StockQuantity TEXT NOT NULL,
+    StockMinimum INTEGER NOT NULL,
+    Active INTEGER NOT NULL,
+    CreatedAt TEXT NOT NULL,
+    UpdatedAt TEXT NOT NULL
+);
+
+CREATE TABLE IF NOT EXISTS StockEntries (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    Date TEXT NOT NULL,
+    Supplier TEXT NULL,
+    DocumentNumber TEXT NULL,
+    Notes TEXT NULL,
+    UserId INTEGER NOT NULL,
+    CreatedAt TEXT NOT NULL,
+    FOREIGN KEY(UserId) REFERENCES Users(Id)
+);
+
+CREATE TABLE IF NOT EXISTS StockEntryItems (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    StockEntryId INTEGER NOT NULL,
+    ProductId INTEGER NOT NULL,
+    Qty TEXT NOT NULL,
+    CostPrice TEXT NOT NULL,
+    MarginPercent TEXT NOT NULL,
+    SalePriceSnapshot TEXT NOT NULL,
+    FOREIGN KEY(StockEntryId) REFERENCES StockEntries(Id),
+    FOREIGN KEY(ProductId) REFERENCES Products(Id)
+);
+
+CREATE TABLE IF NOT EXISTS LedgerMovements (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    MovementType INTEGER NOT NULL,
+    ReferenceType INTEGER NOT NULL,
+    ProductId INTEGER NOT NULL,
+    ReferenceId INTEGER NULL,
+    Qty TEXT NOT NULL,
+    UnitCost TEXT NOT NULL,
+    UnitSalePriceSnapshot TEXT NOT NULL,
+    UserId INTEGER NOT NULL,
+    Timestamp TEXT NOT NULL,
+    FOREIGN KEY(ProductId) REFERENCES Products(Id),
+    FOREIGN KEY(UserId) REFERENCES Users(Id)
+);
+
+CREATE TABLE IF NOT EXISTS Sales (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    TicketNumber TEXT NOT NULL UNIQUE,
+    Date TEXT NOT NULL,
+    UserId INTEGER NOT NULL,
+    PaymentMethod INTEGER NOT NULL,
+    Subtotal TEXT NOT NULL,
+    DiscountTotal TEXT NOT NULL,
+    Total TEXT NOT NULL,
+    FOREIGN KEY(UserId) REFERENCES Users(Id)
+);
+
+CREATE TABLE IF NOT EXISTS SaleItems (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    SaleId INTEGER NOT NULL,
+    ProductId INTEGER NOT NULL,
+    Qty TEXT NOT NULL,
+    UnitPrice TEXT NOT NULL,
+    Discount TEXT NOT NULL,
+    CostPriceSnapshot TEXT NOT NULL,
+    SalePriceSnapshot TEXT NOT NULL,
+    ImeiOrSerial TEXT NULL,
+    FOREIGN KEY(SaleId) REFERENCES Sales(Id),
+    FOREIGN KEY(ProductId) REFERENCES Products(Id)
+);
+
+CREATE TABLE IF NOT EXISTS CashSessions (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    UserId INTEGER NOT NULL,
+    OpenedAt TEXT NOT NULL,
+    OpeningAmount TEXT NOT NULL,
+    ClosedAt TEXT NULL,
+    CountedCash TEXT NULL,
+    ExpectedCash TEXT NULL,
+    Difference TEXT NULL,
+    IsOpen INTEGER NOT NULL,
+    FOREIGN KEY(UserId) REFERENCES Users(Id)
+);
+
+CREATE TABLE IF NOT EXISTS CashMovements (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    CashSessionId INTEGER NOT NULL,
+    Type INTEGER NOT NULL,
+    Amount TEXT NOT NULL,
+    Reason TEXT NOT NULL,
+    Category TEXT NULL,
+    CreatedAt TEXT NOT NULL,
+    UserId INTEGER NOT NULL,
+    FOREIGN KEY(CashSessionId) REFERENCES CashSessions(Id),
+    FOREIGN KEY(UserId) REFERENCES Users(Id)
+);
+
+CREATE TABLE IF NOT EXISTS AuditLogs (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    UserId INTEGER NULL,
+    Action TEXT NOT NULL,
+    EntityName TEXT NULL,
+    EntityId TEXT NULL,
+    Details TEXT NULL,
+    CreatedAt TEXT NOT NULL,
+    FOREIGN KEY(UserId) REFERENCES Users(Id)
+);

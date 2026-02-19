@@ -1,0 +1,101 @@
+{
+  "sheets_detected": {
+    "price": "LISTA PRECIOS LB",
+    "stock": "STOCK VARIOS",
+    "expenses": "GASTOS FIJO"
+  },
+  "counts": {
+    "prices": 269,
+    "stock_rows": 50,
+    "expenses": 8,
+    "seed_products": 50,
+    "seed_products_price_list": 269
+  },
+  "exchange_rate_detected": 1450.0,
+  "examples": {
+    "product": [
+      {
+        "name": "P47",
+        "category": "AURICULAR",
+        "cost_price": 7600.0,
+        "sale_price": 13680.0,
+        "margin_percent": 80.0,
+        "stock_minimum": 1
+      },
+      {
+        "name": "PAVA ELECTRICA",
+        "category": "HOGAR",
+        "cost_price": 8000.0,
+        "sale_price": 14400.0,
+        "margin_percent": 80.0,
+        "stock_minimum": 1
+      },
+      {
+        "name": "FRAPERA",
+        "category": "BAZAR",
+        "cost_price": 27000.0,
+        "sale_price": 48600.0,
+        "margin_percent": 80.0,
+        "stock_minimum": 1
+      },
+      {
+        "name": "MICROFONOLU-3241",
+        "category": "ACCESORIOS",
+        "cost_price": 9500.0,
+        "sale_price": 17100.0,
+        "margin_percent": 80.0,
+        "stock_minimum": 1
+      },
+      {
+        "name": "MICROFONO LU3240",
+        "category": "ACCESORIOS",
+        "cost_price": 10310.0,
+        "sale_price": 18558.0,
+        "margin_percent": 80.0,
+        "stock_minimum": 1
+      }
+    ],
+    "expense": [
+      {
+        "reason": "DANNY",
+        "amount": 900000.0,
+        "type": "expense"
+      },
+      {
+        "reason": "JULIETA",
+        "amount": 400000.0,
+        "type": "expense"
+      },
+      {
+        "reason": "LUZ LOCAL",
+        "amount": 185000.0,
+        "type": "expense"
+      },
+      {
+        "reason": "ARCA",
+        "amount": 70662.0,
+        "type": "expense"
+      },
+      {
+        "reason": "INGRESOS BRUTOS",
+        "amount": 15400.0,
+        "type": "expense"
+      },
+      {
+        "reason": "INTERNET LOCAL",
+        "amount": 13500.0,
+        "type": "expense"
+      },
+      {
+        "reason": "INTERNET CASA",
+        "amount": 21000.0,
+        "type": "expense"
+      },
+      {
+        "reason": "ALQUILER",
+        "amount": 692000.0,
+        "type": "expense"
+      }
+    ]
+  }
+}

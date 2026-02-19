@@ -1,0 +1,21 @@
+CREATE TABLE IF NOT EXISTS ExchangeRates (
+    Id INTEGER PRIMARY KEY AUTOINCREMENT,
+    ArsPerUsd TEXT NOT NULL,
+    EffectiveDate TEXT NOT NULL,
+    UserId INTEGER NOT NULL,
+    CreatedAt TEXT NOT NULL,
+    FOREIGN KEY(UserId) REFERENCES Users(Id)
+);
+
+ALTER TABLE StockEntries ADD COLUMN BatchCode TEXT NULL;
+ALTER TABLE StockEntries ADD COLUMN LogisticsUsd TEXT NOT NULL DEFAULT 0;
+ALTER TABLE StockEntries ADD COLUMN ExchangeRateArs TEXT NOT NULL DEFAULT 1;
+
+ALTER TABLE StockEntryItems ADD COLUMN PurchaseUnitCostUsd TEXT NOT NULL DEFAULT 0;
+ALTER TABLE StockEntryItems ADD COLUMN LogisticsUnitCostUsd TEXT NOT NULL DEFAULT 0;
+ALTER TABLE StockEntryItems ADD COLUMN FinalUnitCostUsd TEXT NOT NULL DEFAULT 0;
+ALTER TABLE StockEntryItems ADD COLUMN FinalUnitCostArs TEXT NOT NULL DEFAULT 0;
+
+UPDATE StockEntries SET BatchCode = 'LOTE-' || printf('%06d', Id) WHERE BatchCode IS NULL OR BatchCode = '';
+
+CREATE UNIQUE INDEX IF NOT EXISTS IX_StockEntries_BatchCode ON StockEntries(BatchCode);

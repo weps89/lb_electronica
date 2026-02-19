@@ -1,0 +1,42 @@
+[
+  {
+    "reason": "DANNY",
+    "amount": 900000.0,
+    "type": "expense"
+  },
+  {
+    "reason": "JULIETA",
+    "amount": 400000.0,
+    "type": "expense"
+  },
+  {
+    "reason": "LUZ LOCAL",
+    "amount": 185000.0,
+    "type": "expense"
+  },
+  {
+    "reason": "ARCA",
+    "amount": 70662.0,
+    "type": "expense"
+  },
+  {
+    "reason": "INGRESOS BRUTOS",
+    "amount": 15400.0,
+    "type": "expense"
+  },
+  {
+    "reason": "INTERNET LOCAL",
+    "amount": 13500.0,
+    "type": "expense"
+  },
+  {
+    "reason": "INTERNET CASA",
+    "amount": 21000.0,
+    "type": "expense"
+  },
+  {
+    "reason": "ALQUILER",
+    "amount": 692000.0,
+    "type": "expense"
+  }
+]

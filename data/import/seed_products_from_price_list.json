@@ -1,0 +1,2423 @@
+[
+  {
+    "name": "AMPLIFICADOR PARLANTE",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 7.768276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 21176.32
+  },
+  {
+    "name": "FUNDA SILICONA/IPHONE",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 2.137931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5828.0
+  },
+  {
+    "name": "FUNDA SIMPLE",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 2.137931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5828.0
+  },
+  {
+    "name": "FUNDA ESTAMPADA",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 2.137931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5828.0
+  },
+  {
+    "name": "SOPORTE DE AUTO VOZK CABLE V8",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 4.389655,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 12730.0
+  },
+  {
+    "name": "SOPORTE SOPAPA ZPX0566",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 3.052414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 8320.88
+  },
+  {
+    "name": "SOPORTE DE AUTO MLD6",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 2.64,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 7196.64
+  },
+  {
+    "name": "FUNDA SUMERGIBLES",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 0.889655,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2425.2
+  },
+  {
+    "name": "HOLDER P/ CELULAR C/ IMAN",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 2.155862,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5876.88
+  },
+  {
+    "name": "PORTAFOCO",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 2.967586,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 8089.64
+  },
+  {
+    "name": "PILAS AAA",
+    "category": "PILAS",
+    "cost_price_usd": 0.664828,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 1812.32
+  },
+  {
+    "name": "PILAS AA",
+    "category": "PILAS",
+    "cost_price_usd": 0.627586,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 1710.8
+  },
+  {
+    "name": "SOPORTE DE AURICULAR",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 4.837241,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 13186.32
+  },
+  {
+    "name": "CABLE AUX ENGOMADO 3.5MM A 3.5MM",
+    "category": "CABLES",
+    "cost_price_usd": 1.950345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5316.64
+  },
+  {
+    "name": "AURI P47/BASE(nuevo)",
+    "category": "AURICULARES",
+    "cost_price_usd": 5.241379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14288.0
+  },
+  {
+    "name": "AURICULARES VOZK LIGTHNING",
+    "category": "AURICULARES",
+    "cost_price_usd": 2.678621,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 7301.92
+  },
+  {
+    "name": "AURICULARES EN  BOLSA",
+    "category": "AURICULARES",
+    "cost_price_usd": 1.084138,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2955.36
+  },
+  {
+    "name": "AURICULAR INALAMBRICO C/DISEÑO/TETRI",
+    "category": "AURICULARES",
+    "cost_price_usd": 8.670345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 23635.36
+  },
+  {
+    "name": "AURICULAR M20",
+    "category": "AURICULARES",
+    "cost_price_usd": 5.07931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 13846.2
+  },
+  {
+    "name": "AURICULARES CON CABLE EN BOLSA",
+    "category": "AURICULARES",
+    "cost_price_usd": 1.003448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2735.4
+  },
+  {
+    "name": "STEREO MEGA STAR",
+    "category": "AUTO",
+    "cost_price_usd": 24.737931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 67435.6
+  },
+  {
+    "name": "STEREO ECOPOWER",
+    "category": "AUTO",
+    "cost_price_usd": 26.806897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 73075.6
+  },
+  {
+    "name": "TRAMONTINA BUZIOS",
+    "category": "BAZAR",
+    "cost_price_usd": 23.197241,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 30.0,
+    "cash_price_ars_ref": 43726.8
+  },
+  {
+    "name": "TRAMONTINA BUZIOS BISTECK",
+    "category": "BAZAR",
+    "cost_price_usd": 8.742069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 40.0,
+    "cash_price_ars_ref": 17746.4
+  },
+  {
+    "name": "VASO CERVECERO 473ML",
+    "category": "BAZAR",
+    "cost_price_usd": 9.655172,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 26320.0
+  },
+  {
+    "name": "CHAMPAÑERA CON PARLANTE",
+    "category": "BAZAR",
+    "cost_price_usd": 18.275862,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 49820.0
+  },
+  {
+    "name": "VASO DE 900ML",
+    "category": "BAZAR",
+    "cost_price_usd": 10.482759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 28576.0
+  },
+  {
+    "name": "QUENCHER 600ML",
+    "category": "BAZAR",
+    "cost_price_usd": 7.434483,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 20266.4
+  },
+  {
+    "name": "VASO CERVECERO 475 ML",
+    "category": "BAZAR",
+    "cost_price_usd": 12.350345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 33667.04
+  },
+  {
+    "name": "QUENCHER 1.2",
+    "category": "BAZAR",
+    "cost_price_usd": 9.832414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 26803.16
+  },
+  {
+    "name": "VASO CERVECERO STANLEY",
+    "category": "BAZAR",
+    "cost_price_usd": 3.793103,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 10340.0
+  },
+  {
+    "name": "HUMIFICADOR 300MLC/LUZ",
+    "category": "BAZAR",
+    "cost_price_usd": 6.323448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 17237.72
+  },
+  {
+    "name": "HUMIFICADOR JARRITO",
+    "category": "BAZAR",
+    "cost_price_usd": 5.654483,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 15414.12
+  },
+  {
+    "name": "HUMIFICADOR ULTRASONICO 200ML",
+    "category": "BAZAR",
+    "cost_price_usd": 6.610345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 18019.8
+  },
+  {
+    "name": "DEPILADORA DE CEJAS",
+    "category": "BELLEZA",
+    "cost_price_usd": 4.622069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 75.0,
+    "cash_price_ars_ref": 11728.5
+  },
+  {
+    "name": "ESPEJO LED TACTIL GRANDE TRIPLE",
+    "category": "BELLEZA",
+    "cost_price_usd": 12.413103,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 60.0,
+    "cash_price_ars_ref": 28798.4
+  },
+  {
+    "name": "MINI ALHAJERO CON ESPEJO",
+    "category": "BELLEZA",
+    "cost_price_usd": 2.62,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 7142.12
+  },
+  {
+    "name": "b",
+    "category": "CABLES",
+    "cost_price_usd": 0.846897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2308.64
+  },
+  {
+    "name": "CABLE ENGOMADO SB-V8 120W IBEK 6A",
+    "category": "CABLES",
+    "cost_price_usd": 0.896552,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2444.0
+  },
+  {
+    "name": "CABLE ENGOMADO USB-V8 120W IBEK",
+    "category": "CABLES",
+    "cost_price_usd": 0.764138,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2083.04
+  },
+  {
+    "name": "CABLE AUX 3.5MM A 3.5MM 3M",
+    "category": "CABLES",
+    "cost_price_usd": 0.903448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2462.8
+  },
+  {
+    "name": "CABLE MINI PLUG MACHO A HEMBRA",
+    "category": "CABLES",
+    "cost_price_usd": 0.671034,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 1829.24
+  },
+  {
+    "name": "CABLE USB-TIPOC MOTO",
+    "category": "CABLES",
+    "cost_price_usd": 0.866207,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2361.28
+  },
+  {
+    "name": "CABLE HDMI VGA 1.5M",
+    "category": "INFORMATICA",
+    "cost_price_usd": 2.062759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5623.08
+  },
+  {
+    "name": "CABLE MOTO TIPO C EN BOLSA 2M",
+    "category": "CABLES",
+    "cost_price_usd": 0.93931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2560.56
+  },
+  {
+    "name": "SAMSUNG TIPO C EN BOLSA 1M",
+    "category": "CABLES",
+    "cost_price_usd": 0.816552,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2225.92
+  },
+  {
+    "name": "CABLE USB-C METAL VOZK",
+    "category": "CABLES",
+    "cost_price_usd": 1.448276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3948.0
+  },
+  {
+    "name": "CABLE USB-C VOZK BLANCO",
+    "category": "CABLES",
+    "cost_price_usd": 1.066897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2908.36
+  },
+  {
+    "name": "CABLE  USB 5A MICRO IBEK",
+    "category": "CABLES",
+    "cost_price_usd": 0.841379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2293.6
+  },
+  {
+    "name": "CABLE AUX CON MICROFONO",
+    "category": "CABLES",
+    "cost_price_usd": 0.926207,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2524.84
+  },
+  {
+    "name": "CABLE VOZK TIPO C METAL NEGRO",
+    "category": "CABLES",
+    "cost_price_usd": 1.257931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3429.12
+  },
+  {
+    "name": "CABLE USB 6A 1.5M",
+    "category": "CABLES",
+    "cost_price_usd": 1.788276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 4874.84
+  },
+  {
+    "name": "CABLE C A C 8A",
+    "category": "CABLES",
+    "cost_price_usd": 1.410345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3844.6
+  },
+  {
+    "name": "CAMARA SEGURIDAD INT",
+    "category": "CAMARAS",
+    "cost_price_usd": 22.589655,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 61579.4
+  },
+  {
+    "name": "MINI CAMARA SEGURIDAD",
+    "category": "CAMARAS",
+    "cost_price_usd": 13.691034,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 37321.76
+  },
+  {
+    "name": "CAMARA MINI ESPIA IMAN",
+    "category": "CAMARAS",
+    "cost_price_usd": 5.344828,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14570.0
+  },
+  {
+    "name": "CAMARA",
+    "category": "CAMARAS",
+    "cost_price_usd": 39.37931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 107348.0
+  },
+  {
+    "name": "CAMARA WIFI",
+    "category": "CAMARAS",
+    "cost_price_usd": 15.226207,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 41506.64
+  },
+  {
+    "name": "TIPO C IBEK 6156 x 1.5mts",
+    "category": "CABLES",
+    "cost_price_usd": 2.0,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5452.0
+  },
+  {
+    "name": "CABLE IPHONE TIPO C/LIGHTNING",
+    "category": "CABLES",
+    "cost_price_usd": 1.862069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 5400.0
+  },
+  {
+    "name": "CABLE LIGTNING C A C IPHONE",
+    "category": "CABLES",
+    "cost_price_usd": 1.931034,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5264.0
+  },
+  {
+    "name": "CABLE IPHONE COMUN",
+    "category": "CABLES",
+    "cost_price_usd": 1.3,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 3770.0
+  },
+  {
+    "name": "CABLE MALLADOS USB A C 120E 6A",
+    "category": "CABLES",
+    "cost_price_usd": 0.944828,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2575.6
+  },
+  {
+    "name": "CABLE TIPO C A C 8A",
+    "category": "CABLES",
+    "cost_price_usd": 0.901379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2457.16
+  },
+  {
+    "name": "CABEZAL DE IPHONE RECTO",
+    "category": "CARGADORES",
+    "cost_price_usd": 3.18069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 8670.56
+  },
+  {
+    "name": "CARGADOR  PUERTO TIPO C VOZK",
+    "category": "CARGADORES",
+    "cost_price_usd": 2.413793,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 6580.0
+  },
+  {
+    "name": "CARGADOR COMPLETO DE IPHONE 20w",
+    "category": "CARGADORES",
+    "cost_price_usd": 4.611034,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 12569.68
+  },
+  {
+    "name": "CABLE TIPO C",
+    "category": "CABLES",
+    "cost_price_usd": 0.906207,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2470.32
+  },
+  {
+    "name": "BATTERYPACK",
+    "category": "CARGADORES",
+    "cost_price_usd": 12.506207,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 34091.92
+  },
+  {
+    "name": "CABLE USB C B12",
+    "category": "CABLES",
+    "cost_price_usd": 1.421379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3874.68
+  },
+  {
+    "name": "CABLE C A C 8A X20",
+    "category": "CABLES",
+    "cost_price_usd": 1.372414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3741.2
+  },
+  {
+    "name": "SELFIE EP-T213",
+    "category": "CELULARES",
+    "cost_price_usd": 6.198621,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 16897.44
+  },
+  {
+    "name": "SELFIE EP-T214",
+    "category": "CELULARES",
+    "cost_price_usd": 26.305517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 85.0,
+    "cash_price_ars_ref": 70564.55
+  },
+  {
+    "name": "ADAPTADOR AURICULAR IPHONE A 3.5",
+    "category": "CONECTORES",
+    "cost_price_usd": 2.510345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 6843.2
+  },
+  {
+    "name": "TRANSMISOR DE RADIO",
+    "category": "CONECTORES",
+    "cost_price_usd": 4.217241,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 11496.2
+  },
+  {
+    "name": "TRANSMISOR BLUETOOTH",
+    "category": "CONECTORES",
+    "cost_price_usd": 2.126897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5797.92
+  },
+  {
+    "name": "ADAPTADOR MULTI TIPO C HDMI",
+    "category": "CONECTORES",
+    "cost_price_usd": 8.122759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 22142.64
+  },
+  {
+    "name": "RECEPTOR CAR BLUETOOTH",
+    "category": "CONECTORES",
+    "cost_price_usd": 2.091724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5702.04
+  },
+  {
+    "name": "Máquina de cortar",
+    "category": "CUIDADO PERSONAL",
+    "cost_price_usd": 4.066897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 11086.36
+  },
+  {
+    "name": "CORTA PELO RECARGABLE",
+    "category": "CUIDADO PERSONAL",
+    "cost_price_usd": 6.37931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 17390.0
+  },
+  {
+    "name": "AFEITADORE PROFESIONAL 5W",
+    "category": "CUIDADO PERSONAL",
+    "cost_price_usd": 15.585517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 42486.12
+  },
+  {
+    "name": "CORTADORA DE PELO  P/BEBES",
+    "category": "CUIDADO PERSONAL",
+    "cost_price_usd": 7.931034,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 21620.0
+  },
+  {
+    "name": "MAQUINA PATILLERA",
+    "category": "CUIDADO PERSONAL",
+    "cost_price_usd": 4.462069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 12163.6
+  },
+  {
+    "name": "PIEDRA DEPILADORA",
+    "category": "CUIDADO PERSONAL",
+    "cost_price_usd": 3.26069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 8888.64
+  },
+  {
+    "name": "VALIJA DE HERRAMIENTAS",
+    "category": "FERRETERIA",
+    "cost_price_usd": 113.793103,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 310200.0
+  },
+  {
+    "name": "JOYSTICK PLAY 4 MESSI MIAMI",
+    "category": "GAMER",
+    "cost_price_usd": 12.413793,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 90.0,
+    "cash_price_ars_ref": 34200.0
+  },
+  {
+    "name": "PIZARRA MAGICA 8.5",
+    "category": "GAMER",
+    "cost_price_usd": 2.17931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5940.8
+  },
+  {
+    "name": "LAVACOPAS AUTOMATICO",
+    "category": "HOGAR",
+    "cost_price_usd": 4.976552,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 13566.08
+  },
+  {
+    "name": "DESTAPAVINOS A PILAS",
+    "category": "HOGAR",
+    "cost_price_usd": 8.765517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 23894.8
+  },
+  {
+    "name": "REPELENTES",
+    "category": "HOGAR",
+    "cost_price_usd": 3.602759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 9821.12
+  },
+  {
+    "name": "ENCENDEDORES",
+    "category": "HOGAR",
+    "cost_price_usd": 0.303448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 827.2
+  },
+  {
+    "name": "JARRA ELECTRICA",
+    "category": "HOGAR",
+    "cost_price_usd": 9.048276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 24665.6
+  },
+  {
+    "name": "LICUADORA PORTATIL",
+    "category": "HOGAR",
+    "cost_price_usd": 7.186207,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 95.0,
+    "cash_price_ars_ref": 20319.0
+  },
+  {
+    "name": "PELADOR DE CHOCLO",
+    "category": "HOGAR",
+    "cost_price_usd": 5.742759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 15654.76
+  },
+  {
+    "name": "BALANZA DE PRECISION POCKET",
+    "category": "HOGAR",
+    "cost_price_usd": 3.965517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 11500.0
+  },
+  {
+    "name": "BALANZA PERSONAL",
+    "category": "HOGAR",
+    "cost_price_usd": 8.034483,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 21902.0
+  },
+  {
+    "name": "ASPIRADORA INALAMBRICA",
+    "category": "HOGAR",
+    "cost_price_usd": 6.436552,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 17546.04
+  },
+  {
+    "name": "BLANZA COCINA",
+    "category": "HOGAR",
+    "cost_price_usd": 3.895172,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 10618.24
+  },
+  {
+    "name": "DISPENSER CANILLA",
+    "category": "HOGAR",
+    "cost_price_usd": 6.62069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 18048.0
+  },
+  {
+    "name": "VENTILADORE 14 PULADAS",
+    "category": "HOGAR",
+    "cost_price_usd": 20.971724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 57168.92
+  },
+  {
+    "name": "CALOVENTOR",
+    "category": "HOGAR",
+    "cost_price_usd": 12.275862,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 33464.0
+  },
+  {
+    "name": "HUMIFICADOR C/ LASER",
+    "category": "HOGAR",
+    "cost_price_usd": 11.413793,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 31114.0
+  },
+  {
+    "name": "HUMIFICADOR ASTRONAUTA",
+    "category": "HOGAR",
+    "cost_price_usd": 7.322759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 80.0,
+    "cash_price_ars_ref": 19112.4
+  },
+  {
+    "name": "ESTUFA",
+    "category": "HOGAR",
+    "cost_price_usd": 18.508966,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 50455.44
+  },
+  {
+    "name": "ESTUFA EP-3091",
+    "category": "HOGAR",
+    "cost_price_usd": 13.584828,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 37032.24
+  },
+  {
+    "name": "TIRA LED RGB",
+    "category": "ILUMINACION",
+    "cost_price_usd": 4.634483,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 12633.6
+  },
+  {
+    "name": "LAMPARA SOLAR led",
+    "category": "ILUMINACION",
+    "cost_price_usd": 3.255172,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 8873.6
+  },
+  {
+    "name": "SET 3 LUCES LED",
+    "category": "ILUMINACION",
+    "cost_price_usd": 6.863448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 18709.76
+  },
+  {
+    "name": "REFLECTOR SOLAR LED 150W",
+    "category": "ILUMINACION",
+    "cost_price_usd": 9.666207,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 26350.08
+  },
+  {
+    "name": "REFLECTOR LED 50W",
+    "category": "ILUMINACION",
+    "cost_price_usd": 4.872414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 13282.2
+  },
+  {
+    "name": "TIRA LED",
+    "category": "ILUMINACION",
+    "cost_price_usd": 5.706897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 15557.0
+  },
+  {
+    "name": "LISTON LED RECARGABLE TACTIL",
+    "category": "ILUMINACION",
+    "cost_price_usd": 5.18,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14120.68
+  },
+  {
+    "name": "REFLECTOR 150W",
+    "category": "ILUMINACION",
+    "cost_price_usd": 9.942069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 27102.08
+  },
+  {
+    "name": "REFLECTOR LED 50W RGB",
+    "category": "ILUMINACION",
+    "cost_price_usd": 5.622759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 15327.64
+  },
+  {
+    "name": "PROYECTOR ASTRONAUTA C/PARLANTE",
+    "category": "IMAGEN",
+    "cost_price_usd": 22.765517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 62058.8
+  },
+  {
+    "name": "HDMI A HDMI X 5MTS",
+    "category": "IMAGEN",
+    "cost_price_usd": 3.618621,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 9864.36
+  },
+  {
+    "name": "HDMI A HDMI X 1.5MTS",
+    "category": "IMAGEN",
+    "cost_price_usd": 2.275862,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 6204.0
+  },
+  {
+    "name": "HDMI A HDMI X 10MTS",
+    "category": "IMAGEN",
+    "cost_price_usd": 5.348276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14579.4
+  },
+  {
+    "name": "HDMI 3X1 SPLITER",
+    "category": "IMAGEN",
+    "cost_price_usd": 6.430345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 17529.12
+  },
+  {
+    "name": "ANTENA DIGITAL HDTV 4LIFE",
+    "category": "IMAGEN",
+    "cost_price_usd": 4.332414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 11810.16
+  },
+  {
+    "name": "ANTENA WIFI",
+    "category": "IMAGEN",
+    "cost_price_usd": 3.465517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 9447.0
+  },
+  {
+    "name": "TECLADO/MOUSE INALAMBRICO",
+    "category": "INFORMATICA",
+    "cost_price_usd": 13.662759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 37244.68
+  },
+  {
+    "name": "TECLADO LUO COLOR PASTEL",
+    "category": "INFORMATICA",
+    "cost_price_usd": 7.212414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 19661.04
+  },
+  {
+    "name": "CABLE RED 5M",
+    "category": "INFORMATICA",
+    "cost_price_usd": 1.413103,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3852.12
+  },
+  {
+    "name": "CABLE RED 3M",
+    "category": "INFORMATICA",
+    "cost_price_usd": 1.245517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3395.28
+  },
+  {
+    "name": "CABLE RED 1.5M",
+    "category": "INFORMATICA",
+    "cost_price_usd": 1.023448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2789.92
+  },
+  {
+    "name": "TECLADOR MINI INALAMBRICO",
+    "category": "INFORMATICA",
+    "cost_price_usd": 6.976552,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 19018.08
+  },
+  {
+    "name": "MOUSE PAD",
+    "category": "INFORMATICA",
+    "cost_price_usd": 3.143448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 8569.04
+  },
+  {
+    "name": "KIT TECHADO+MOUSE",
+    "category": "INFORMATICA",
+    "cost_price_usd": 8.869655,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 24178.68
+  },
+  {
+    "name": "TECLADO BLUETOOTH",
+    "category": "INFORMATICA",
+    "cost_price_usd": 8.351724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 22766.8
+  },
+  {
+    "name": "ADAPTADOR WIFI 950 M",
+    "category": "INFORMATICA",
+    "cost_price_usd": 2.564138,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 6989.84
+  },
+  {
+    "name": "CONTROL TECLADO MOUSE BLUETOOTH",
+    "category": "INFORMATICA",
+    "cost_price_usd": 8.29931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 22623.92
+  },
+  {
+    "name": "MAQUINA DE BOXEO",
+    "category": "JUGUETE",
+    "cost_price_usd": 26.084138,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 50.0,
+    "cash_price_ars_ref": 56733.0
+  },
+  {
+    "name": "MUNICION HIDROGEL",
+    "category": "JUGUETE",
+    "cost_price_usd": 1.127586,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3073.8
+  },
+  {
+    "name": "LUZ MINERA HX208-4",
+    "category": "LINTERNA",
+    "cost_price_usd": 4.558621,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 12426.8
+  },
+  {
+    "name": "MICROFONO CORBATERO X2",
+    "category": "MICROFONO",
+    "cost_price_usd": 10.4,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 28350.4
+  },
+  {
+    "name": "JBL GO 4",
+    "category": "PARLANTE",
+    "cost_price_usd": 41.448276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 35.0,
+    "cash_price_ars_ref": 81135.0
+  },
+  {
+    "name": "JBL FLIP 6",
+    "category": "PARLANTE",
+    "cost_price_usd": 84.62069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 50.0,
+    "cash_price_ars_ref": 184050.0
+  },
+  {
+    "name": "PARLANTE POSS",
+    "category": "PARLANTE",
+    "cost_price_usd": 69.310345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 40.0,
+    "cash_price_ars_ref": 140700.0
+  },
+  {
+    "name": "PARLANTE 3´´",
+    "category": "PARLANTE",
+    "cost_price_usd": 5.321379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14506.08
+  },
+  {
+    "name": "PARLANTE PARA KARAOKE C/ MICROFONO",
+    "category": "PARLANTE",
+    "cost_price_usd": 19.693103,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 53683.4
+  },
+  {
+    "name": "PARLANTE 3´´ COLORES",
+    "category": "PARLANTE",
+    "cost_price_usd": 6.556552,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 17873.16
+  },
+  {
+    "name": "PARLANTE 3´´ COLORES",
+    "category": "PARLANTE",
+    "cost_price_usd": 7.196552,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 19617.8
+  },
+  {
+    "name": "PARLANTE 4´´ LUCES",
+    "category": "PARLANTE",
+    "cost_price_usd": 6.895862,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 18798.12
+  },
+  {
+    "name": "PARLANTE 4´´ TRANSPARENTE",
+    "category": "PARLANTE",
+    "cost_price_usd": 5.447586,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14850.12
+  },
+  {
+    "name": "PARLANTE 3{{ FLAME LIGHT",
+    "category": "PARLANTE",
+    "cost_price_usd": 5.171724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14098.12
+  },
+  {
+    "name": "PARLANTE BORDE TELA CON LUCES",
+    "category": "PARLANTE",
+    "cost_price_usd": 5.171724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14098.12
+  },
+  {
+    "name": "PARLANTE BLUETOOTH LUCES LED",
+    "category": "PARLANTE",
+    "cost_price_usd": 5.171724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14098.12
+  },
+  {
+    "name": "SPEAKER EP-2502 TIPO JBL",
+    "category": "PARLANTE",
+    "cost_price_usd": 13.584828,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 37032.24
+  },
+  {
+    "name": "SPEAKER EP-2266 110W",
+    "category": "PARLANTE",
+    "cost_price_usd": 47.233103,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 60.0,
+    "cash_price_ars_ref": 109580.8
+  },
+  {
+    "name": "SPEAKER F-2384",
+    "category": "PARLANTE",
+    "cost_price_usd": 7.70069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 20992.08
+  },
+  {
+    "name": "SPEAKER EP-2526",
+    "category": "PARLANTE",
+    "cost_price_usd": 5.131724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 13989.08
+  },
+  {
+    "name": "SPEAKER EP-2112",
+    "category": "PARLANTE",
+    "cost_price_usd": 11.574483,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 31552.04
+  },
+  {
+    "name": "PARLANTE POSS",
+    "category": "PARLANTE",
+    "cost_price_usd": 66.375862,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 75.0,
+    "cash_price_ars_ref": 168428.75
+  },
+  {
+    "name": "MEMORIA 32GB",
+    "category": "PENDRIVE/TMEMORIA",
+    "cost_price_usd": 5.689655,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 16500.0
+  },
+  {
+    "name": "MEMORIA 8GB",
+    "category": "PENDRIVE/TMEMORIA",
+    "cost_price_usd": 4.602069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 13346.0
+  },
+  {
+    "name": "PENDRIVE 16GB",
+    "category": "PENDRIVE/TMEMORIA",
+    "cost_price_usd": 5.281379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 15316.0
+  },
+  {
+    "name": "PILA 2032",
+    "category": "PILAS",
+    "cost_price_usd": 0.482759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 1316.0
+  },
+  {
+    "name": "PILA 2025",
+    "category": "PILAS",
+    "cost_price_usd": 0.482759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 1316.0
+  },
+  {
+    "name": "PILA 2016",
+    "category": "PILAS",
+    "cost_price_usd": 0.482759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 1316.0
+  },
+  {
+    "name": "SWT500 ULTRA AZUL",
+    "category": "RELOJES",
+    "cost_price_usd": 9.034483,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 24628.0
+  },
+  {
+    "name": "SW C68 ULTRA NEGRO",
+    "category": "RELOJES",
+    "cost_price_usd": 5.743448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 15656.64
+  },
+  {
+    "name": "ESFIGMAMONOMETRO",
+    "category": "SALUD",
+    "cost_price_usd": 11.147586,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 30388.32
+  },
+  {
+    "name": "FAJA CORRECTORA",
+    "category": "SALUD/BELLEZA",
+    "cost_price_usd": 2.572414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 7012.4
+  },
+  {
+    "name": "SMW H900 7 MALLAS EN 1",
+    "category": "SMARTWACH",
+    "cost_price_usd": 12.341379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 33642.6
+  },
+  {
+    "name": "PARLANTE EFECTO LUZ RGB",
+    "category": "PARLANTE",
+    "cost_price_usd": 7.355172,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 20050.2
+  },
+  {
+    "name": "PARLANTE EFECTO LUZ RGB",
+    "category": "PARLANTE",
+    "cost_price_usd": 6.734483,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 18358.2
+  },
+  {
+    "name": "SAMSUNG A06",
+    "category": "TELEFONIA",
+    "cost_price_usd": 98.482759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 65.0,
+    "cash_price_ars_ref": 235620.0
+  },
+  {
+    "name": "KIT TERMO+MATE",
+    "category": "HOGAR",
+    "cost_price_usd": 8.875862,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 60.0,
+    "cash_price_ars_ref": 20592.0
+  },
+  {
+    "name": "JARRA ELECTRICA LUO LU-4925",
+    "category": "HOGAR",
+    "cost_price_usd": 5.344828,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14570.0
+  },
+  {
+    "name": "MINI CAMARA INSTANTANEA LU-SY13",
+    "category": "CAMARAS",
+    "cost_price_usd": 13.554483,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 60.0,
+    "cash_price_ars_ref": 31446.4
+  },
+  {
+    "name": "MICROFONO INALAMBRICO LU-3241",
+    "category": "MICROFONO",
+    "cost_price_usd": 6.492414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 17698.32
+  },
+  {
+    "name": "MICROFONO KARAOKE LU-3240 PLASTICO",
+    "category": "MICROFONO",
+    "cost_price_usd": 7.110345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 19382.8
+  },
+  {
+    "name": "REPUESTO DE CAMARA X5",
+    "category": "REPUESTO CAMARA",
+    "cost_price_usd": 0.931034,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2538.0
+  },
+  {
+    "name": "REPUESTODE CAMARA C/PEGAMENTO X5",
+    "category": "REPUESTO CAMARA",
+    "cost_price_usd": 1.048276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2857.6
+  },
+  {
+    "name": "CAJA BOLIGRAFOS NEGRO FILGO",
+    "category": "ESCOLARES",
+    "cost_price_usd": 0.071724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 195.52
+  },
+  {
+    "name": "MARCADORES P/PIZARRON CON IMAN NEGRO",
+    "category": "ESCOLARES",
+    "cost_price_usd": 0.525517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 1432.56
+  },
+  {
+    "name": "MARCADORES P/PIZARRON CON IMAN COLORES",
+    "category": "ESCOLARES",
+    "cost_price_usd": 0.525517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 1432.56
+  },
+  {
+    "name": "TV VOX LUO",
+    "category": "IMAGEN",
+    "cost_price_usd": 24.471034,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 50.0,
+    "cash_price_ars_ref": 53224.5
+  },
+  {
+    "name": "TEMPLADOS",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 0.372414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 1015.2
+  },
+  {
+    "name": "TECLADO USB NOVA NKB-78011",
+    "category": "INFORMATICA",
+    "cost_price_usd": 3.831034,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 70.0,
+    "cash_price_ars_ref": 9443.5
+  },
+  {
+    "name": "MASAJEADOR FACIAL RECARGABLE A706",
+    "category": "SALUD",
+    "cost_price_usd": 4.365517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 11900.4
+  },
+  {
+    "name": "HUMIFICADOR ASTRONAUTA",
+    "category": "BAZAR",
+    "cost_price_usd": 6.841379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 18649.6
+  },
+  {
+    "name": "CABLE PUENTE 600A",
+    "category": "AUTO",
+    "cost_price_usd": 4.337931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 60.0,
+    "cash_price_ars_ref": 10064.0
+  },
+  {
+    "name": "TRIPODE CON LUZ LED Y MICROFONO SLF5107",
+    "category": "CELULARES",
+    "cost_price_usd": 4.586207,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 12502.0
+  },
+  {
+    "name": "ESTACA SOLAR 8 LED",
+    "category": "BAZAR",
+    "cost_price_usd": 3.106897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 8469.4
+  },
+  {
+    "name": "HUMIFICADOR FOGATA",
+    "category": "BAZAR",
+    "cost_price_usd": 6.655172,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 18142.0
+  },
+  {
+    "name": "CABLE IPHOINE FOX COMUN",
+    "category": "CABLES",
+    "cost_price_usd": 1.55931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 4522.0
+  },
+  {
+    "name": "LAPIZ DEPILADOR DE CEJAS BA166",
+    "category": "SALUD",
+    "cost_price_usd": 3.206897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 8742.0
+  },
+  {
+    "name": "SOPORTE BASE PORTATIL APOYA NOTEBOOK",
+    "category": "INFORMATICA",
+    "cost_price_usd": 2.510345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 6843.2
+  },
+  {
+    "name": "KIT NEON LED 5M LUZ FRIA /COLORES",
+    "category": "ILUMINACION",
+    "cost_price_usd": 5.62069,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 15322.0
+  },
+  {
+    "name": "RECEPTOR BLUETOOTH BH93",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 2.172414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5922.0
+  },
+  {
+    "name": "CABLE MALLADO TIPO C 3.1A CAB-41002",
+    "category": "CABLES",
+    "cost_price_usd": 1.364138,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3718.64
+  },
+  {
+    "name": "CABLE TIPO C TIME CAB 4112",
+    "category": "CABLES",
+    "cost_price_usd": 1.348966,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3677.28
+  },
+  {
+    "name": "CABLE TIPO C COLORES 2A",
+    "category": "CABLES",
+    "cost_price_usd": 1.096552,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2989.2
+  },
+  {
+    "name": "CABLE TIPO C BOLSA  CAB-41010",
+    "category": "CABLES",
+    "cost_price_usd": 1.210345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3299.4
+  },
+  {
+    "name": "CABLE TIPO C BOLSA 1,5MTS CAB-41014",
+    "category": "CABLES",
+    "cost_price_usd": 1.348276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3675.4
+  },
+  {
+    "name": "CABLE CORTO TIPO C 12005",
+    "category": "CABLES",
+    "cost_price_usd": 0.817241,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2227.8
+  },
+  {
+    "name": "CABLE TIME C-C 1M 45W CAB-44003",
+    "category": "CABLES",
+    "cost_price_usd": 1.005517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2741.04
+  },
+  {
+    "name": "CABLE RCA A 3,5",
+    "category": "CABLES",
+    "cost_price_usd": 1.042759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2842.56
+  },
+  {
+    "name": "CARGADOR CON CABLE  PD45W+QC20W CC-59126",
+    "category": "CARGADORES",
+    "cost_price_usd": 5.191724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 14152.64
+  },
+  {
+    "name": "CARGADOR CELU TIME PD30W CC-59251",
+    "category": "CARGADORES",
+    "cost_price_usd": 3.306897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 9014.6
+  },
+  {
+    "name": "PILAS EN BLISTER 3B CR2032",
+    "category": "PILAS",
+    "cost_price_usd": 1.192414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3250.52
+  },
+  {
+    "name": "PILAS 3A",
+    "category": "PILAS",
+    "cost_price_usd": 1.006897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 2744.8
+  },
+  {
+    "name": "CABLE USB V8 MALLADO CAB-42007",
+    "category": "CABLES",
+    "cost_price_usd": 1.137931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3102.0
+  },
+  {
+    "name": "CABLE DE RED 4M",
+    "category": "INFORMATICA",
+    "cost_price_usd": 1.237931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3374.6
+  },
+  {
+    "name": "MASAJEADOR RECARGABLE CON MANGO DE EXTEN.",
+    "category": "SALUD",
+    "cost_price_usd": 13.717241,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 37393.2
+  },
+  {
+    "name": "AURICULAR INALAMBRICO JK613",
+    "category": "AURICULARES",
+    "cost_price_usd": 3.596552,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 9804.2
+  },
+  {
+    "name": "LED DE PARED DIRECCIONAL RGB",
+    "category": "ILUMINACION",
+    "cost_price_usd": 6.172414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 16826.0
+  },
+  {
+    "name": "LAMPARA ATARDECER",
+    "category": "ILUMINACION",
+    "cost_price_usd": 4.413793,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 12032.0
+  },
+  {
+    "name": "TIRAS LED 28X35 RGB",
+    "category": "ILUMINACION",
+    "cost_price_usd": 3.482759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 9494.0
+  },
+  {
+    "name": "MINI TECLADO INAHLAMBRICO RGB",
+    "category": "INFORMATICA",
+    "cost_price_usd": 5.517241,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 15040.0
+  },
+  {
+    "name": "LINTERNA LED LUZ BICI",
+    "category": "ILUMINACION",
+    "cost_price_usd": 3.910345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 10659.6
+  },
+  {
+    "name": "LINTERNA GUANTE",
+    "category": "ILUMINACION",
+    "cost_price_usd": 3.572414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 9738.4
+  },
+  {
+    "name": "PILAS 2A X60",
+    "category": "PILAS",
+    "cost_price_usd": 1.906897,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5198.2
+  },
+  {
+    "name": "PAD MOUSE GEL",
+    "category": "INFORMATICA",
+    "cost_price_usd": 3.888966,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 10601.32
+  },
+  {
+    "name": "PAD MAUSE GEL NUBE",
+    "category": "INFORMATICA",
+    "cost_price_usd": 4.103448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 11186.0
+  },
+  {
+    "name": "CABEZAL CARGADOR 25W SM-27",
+    "category": "CARGADORES",
+    "cost_price_usd": 2.910345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 7933.6
+  },
+  {
+    "name": "CABLE HDMI MALLADO 5M",
+    "category": "IMAGEN",
+    "cost_price_usd": 2.717241,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 7407.2
+  },
+  {
+    "name": "CABLE HDMI MALLADO 10M",
+    "category": "IMAGEN",
+    "cost_price_usd": 3.613793,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 9851.2
+  },
+  {
+    "name": "CARGADOR CABEZAL BOLSITA TMC114",
+    "category": "CARGADORES",
+    "cost_price_usd": 1.034483,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 3000.0
+  },
+  {
+    "name": "CARGADOR V8 BOLSITA 2.1 A TMCC219",
+    "category": "CARGADORES",
+    "cost_price_usd": 1.124138,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 200.0,
+    "cash_price_ars_ref": 4890.0
+  },
+  {
+    "name": "CARGADOR 20W CON CABLE C-C TMC-408",
+    "category": "CARGADORES",
+    "cost_price_usd": 2.641379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 7660.0
+  },
+  {
+    "name": "CARGADOR TIME 3.1A TIPOC USB TMCC818",
+    "category": "CARGADORES",
+    "cost_price_usd": 2.217241,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 6430.0
+  },
+  {
+    "name": "CARGADOR DE NOTEBOOK FICHA LENOVO",
+    "category": "CARGADORES",
+    "cost_price_usd": 4.510345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 12295.2
+  },
+  {
+    "name": "FUENTE DE LAIMENTACION UNIVERSAL DE 12V/3A TMF-3009",
+    "category": "CARGADORES",
+    "cost_price_usd": 3.108276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 8473.16
+  },
+  {
+    "name": "PLACA DE SONIDO NUSB",
+    "category": "INFORMATICA",
+    "cost_price_usd": 1.182759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3224.2
+  },
+  {
+    "name": "CABLE HDMI X3M",
+    "category": "IMAGEN",
+    "cost_price_usd": 2.063448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 5624.96
+  },
+  {
+    "name": "AURICULAR INALAMBRICO F9",
+    "category": "AURICULARES",
+    "cost_price_usd": 5.150345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 14936.0
+  },
+  {
+    "name": "AURICULARE TWS METAL M25",
+    "category": "AURICULARES",
+    "cost_price_usd": 5.197931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 15074.0
+  },
+  {
+    "name": "AURIC BT ANIMADO POKEMON",
+    "category": "AURICULARES",
+    "cost_price_usd": 8.101379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 22084.36
+  },
+  {
+    "name": "AURI M10 PRO",
+    "category": "AURICULARES",
+    "cost_price_usd": 4.624828,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 13412.0
+  },
+  {
+    "name": "AURI BT CON LUZ RGB TRANSPARENTE ULTRAPODS",
+    "category": "AURICULARES",
+    "cost_price_usd": 7.155862,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 19506.88
+  },
+  {
+    "name": "LAMPARA CON SENSOR SOLAR BK-100",
+    "category": "ILUMINACION",
+    "cost_price_usd": 3.103448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 8460.0
+  },
+  {
+    "name": "CABLE ENGOMADO TIPO CB-562",
+    "category": "CABLES",
+    "cost_price_usd": 1.37931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 3760.0
+  },
+  {
+    "name": "MICROFONO  3,5MM",
+    "category": "MICROFONO",
+    "cost_price_usd": 2.575172,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 7468.0
+  },
+  {
+    "name": "CEPILLO DE VAPOR P MASCOTAS RECARGABLES",
+    "category": "MASCOTAS",
+    "cost_price_usd": 2.617241,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 7590.0
+  },
+  {
+    "name": "CARGADOR DE CELU TIME PD30W CC-59251",
+    "category": "CARGADORES",
+    "cost_price_usd": 3.532414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 10244.0
+  },
+  {
+    "name": "MOCHILA CON PARLANTE CH-M802",
+    "category": "BAZAR",
+    "cost_price_usd": 13.734483,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 50.0,
+    "cash_price_ars_ref": 29872.5
+  },
+  {
+    "name": "CORTA BARBA 3N1RECARGABLE CHI-7213",
+    "category": "BELLEZA",
+    "cost_price_usd": 8.532414,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 95.0,
+    "cash_price_ars_ref": 24125.4
+  },
+  {
+    "name": "AURICULAR  IN EAR M10 X100U HQ-234",
+    "category": "AURICULARES",
+    "cost_price_usd": 3.650345,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 150.0,
+    "cash_price_ars_ref": 13232.5
+  },
+  {
+    "name": "AURICULAR GAMER INALAMRICO JK-607",
+    "category": "AURICULARES",
+    "cost_price_usd": 4.867586,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 14116.0
+  },
+  {
+    "name": "AURICULAR INALAMBRICO JS-603",
+    "category": "AURICULARES",
+    "cost_price_usd": 3.701379,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 10734.0
+  },
+  {
+    "name": "ARO DE SELFIE 12P LED-83026",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 5.549655,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 16094.0
+  },
+  {
+    "name": "ARO DE SELFIE LED RGB 12\" LED- 83028",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 6.402759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 18568.0
+  },
+  {
+    "name": "LED DE PARED BIDIRECCIONAL CON RGB C/SENSOR IMANTADA LED-83055",
+    "category": "ILUMINACION",
+    "cost_price_usd": 6.522759,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 90.0,
+    "cash_price_ars_ref": 17970.2
+  },
+  {
+    "name": "BOLA LED DE CRISTAL 8CM 83060",
+    "category": "ILUMINACION",
+    "cost_price_usd": 4.151724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 90.0,
+    "cash_price_ars_ref": 11438.0
+  },
+  {
+    "name": "AURICULAR INALAMBRICO CON PANTALLA JK-604",
+    "category": "AURICULARES",
+    "cost_price_usd": 3.951724,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 150.0,
+    "cash_price_ars_ref": 14325.0
+  },
+  {
+    "name": "CARRI DISC 3.0  MELECH-2076",
+    "category": "INFORMATICA",
+    "cost_price_usd": 4.224138,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 12250.0
+  },
+  {
+    "name": "MOUSE BLUETOOTH INAMBRICO RGB MELECH-307",
+    "category": "INFORMATICA",
+    "cost_price_usd": 3.615172,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 9854.96
+  },
+  {
+    "name": "ADAPTADOR VIAJERO MELECH-38",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 2.255172,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 6540.0
+  },
+  {
+    "name": "LUZ BAJO ALACENA MELECH-99",
+    "category": "ILUMINACION",
+    "cost_price_usd": 5.325517,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 15444.0
+  },
+  {
+    "name": "CABEZAL CARGADOR 45W SM-27",
+    "category": "CARGADORES",
+    "cost_price_usd": 3.104138,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 9002.0
+  },
+  {
+    "name": "CARGADOR 20W CON CABLE C-C TMC-408",
+    "category": "CARGADORES",
+    "cost_price_usd": 2.823448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 8188.0
+  },
+  {
+    "name": "CARGADOR TIME 3.1A TIPOC USB TMCC818",
+    "category": "CARGADORES",
+    "cost_price_usd": 2.344138,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 6798.0
+  },
+  {
+    "name": "TRPODE 2.1 METAL TRP-72009",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 3.948276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 11450.0
+  },
+  {
+    "name": "CARGADOR VOZ DOBLE PUERTO 3.1 A",
+    "category": "CARGADORES",
+    "cost_price_usd": 2.375862,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 225.0,
+    "cash_price_ars_ref": 11196.25
+  },
+  {
+    "name": "CARGADOR PATAS OBLICUAS 20W",
+    "category": "CARGADORES",
+    "cost_price_usd": 3.353793,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 9726.0
+  },
+  {
+    "name": "CABLE USB MALLAD0 4 EN 1 TYPO C LIGTHNING",
+    "category": "CARGADORES",
+    "cost_price_usd": 2.346207,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 50.0,
+    "cash_price_ars_ref": 5103.0
+  },
+  {
+    "name": "REPETIDOR SEÑAL WIFI",
+    "category": "INFORMATICA",
+    "cost_price_usd": 7.783448,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 65.0,
+    "cash_price_ars_ref": 18621.9
+  },
+  {
+    "name": "SOPORTE DE NOTEBOOK METAL",
+    "category": "INFORMATICA",
+    "cost_price_usd": 19.157931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 40.0,
+    "cash_price_ars_ref": 38890.6
+  },
+  {
+    "name": "CARGADOR INALAMBRICO DE IPHONE",
+    "category": "CARGADORES",
+    "cost_price_usd": 4.504138,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 13062.0
+  },
+  {
+    "name": "TRIPODE+ARO RGB",
+    "category": "ACCESORIOS",
+    "cost_price_usd": 10.344828,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 88.0,
+    "cash_price_ars_ref": 28200.0
+  },
+  {
+    "name": "MEMORIA 128GB",
+    "category": "PENDRIVE/TMEMORIA",
+    "cost_price_usd": 8.944828,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 60.0,
+    "cash_price_ars_ref": 20752.0
+  },
+  {
+    "name": "CABLE ALIMENTACION PC TREBOL",
+    "category": "CABLES",
+    "cost_price_usd": 1.948276,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 5650.0
+  },
+  {
+    "name": "ENCENDEDOR ELECTRICO RECARGABLE",
+    "category": "HOGAR",
+    "cost_price_usd": 3.137931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 100.0,
+    "cash_price_ars_ref": 9100.0
+  },
+  {
+    "name": "TECLA SMART CON 2 CANALES C/APP WIFI",
+    "category": "ILUMINACION",
+    "cost_price_usd": 15.347586,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 50.0,
+    "cash_price_ars_ref": 33381.0
+  },
+  {
+    "name": "ESPATULA FACIAL ULTRASONICA PROFUNDA RECARGABLES",
+    "category": "BELLEZA",
+    "cost_price_usd": 5.017241,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 70.0,
+    "cash_price_ars_ref": 12367.5
+  },
+  {
+    "name": "MASAJEADOR FACIAL CON MICROCORRIENTE RECARGABLES",
+    "category": "BELLEZA",
+    "cost_price_usd": 8.137931,
+    "stock_quantity": 0,
+    "stock_minimum": 1,
+    "margin_percent": 80.0,
+    "cash_price_ars_ref": 21240.0
+  }
+]

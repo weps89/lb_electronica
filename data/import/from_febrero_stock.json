@@ -1,0 +1,302 @@
+[
+  {
+    "category": "AURICULAR",
+    "name": "P47",
+    "qty": 55.0,
+    "cost_price": 7600.0
+  },
+  {
+    "category": "HOGAR",
+    "name": "PAVA ELECTRICA",
+    "qty": 13.0,
+    "cost_price": 8000.0
+  },
+  {
+    "category": "BAZAR",
+    "name": "FRAPERA",
+    "qty": 2.0,
+    "cost_price": 27000.0
+  },
+  {
+    "category": "ACCESORIOS",
+    "name": "MICROFONOLU-3241",
+    "qty": 7.0,
+    "cost_price": 9500.0
+  },
+  {
+    "category": "ACCESORIOS",
+    "name": "MICROFONO LU3240",
+    "qty": 4.0,
+    "cost_price": 10310.0
+  },
+  {
+    "category": "IMAGEN",
+    "name": "TV BOX",
+    "qty": 11.0,
+    "cost_price": 35500.0
+  },
+  {
+    "category": "BAZAR",
+    "name": "DESTAOAVINO A PILAS",
+    "qty": 6.0,
+    "cost_price": 12700.0
+  },
+  {
+    "category": "SALUD/BELLEZA",
+    "name": "MASAJEADOR ELECTRODOS",
+    "qty": 2.0,
+    "cost_price": 10500.0
+  },
+  {
+    "category": "ILUMINACION",
+    "name": "FOCO RGB ESTRELLAS",
+    "qty": 6.0,
+    "cost_price": 1800.0
+  },
+  {
+    "category": "BAZAR",
+    "name": "LAVACOPAS",
+    "qty": 2.0,
+    "cost_price": 5500.0
+  },
+  {
+    "category": "BAZAR",
+    "name": "DESGRANADOR",
+    "qty": 2.0,
+    "cost_price": 8500.0
+  },
+  {
+    "category": "SALUD/BELLEZA",
+    "name": "PIEDRA DEPILADORA",
+    "qty": 3.0,
+    "cost_price": 5000.0
+  },
+  {
+    "category": "SALUD/BELLEZA",
+    "name": "PATILLERA",
+    "qty": 3.0,
+    "cost_price": 6500.0
+  },
+  {
+    "category": "ACCESORIOS",
+    "name": "SOPORTE DE AUTO NFC",
+    "qty": 4.0,
+    "cost_price": 6500.0
+  },
+  {
+    "category": "AUTOS",
+    "name": "STEREOS",
+    "qty": 6.0,
+    "cost_price": 39000.0
+  },
+  {
+    "category": "INFORMATICA",
+    "name": "TECLADOS",
+    "qty": 5.0,
+    "cost_price": 5500.0
+  },
+  {
+    "category": "ILUMINACION",
+    "name": "GUANTES CON LUZ",
+    "qty": 4.0,
+    "cost_price": 5500.0
+  },
+  {
+    "category": "HOGAR",
+    "name": "ANAFE ELECTRICA",
+    "qty": 1.0,
+    "cost_price": 0
+  },
+  {
+    "category": "SALUD/BELLEZA",
+    "name": "TENSIOMETRO",
+    "qty": 1.0,
+    "cost_price": 17000.0
+  },
+  {
+    "category": "SALUD/BELLEZA",
+    "name": "MAQUINA DE PELO BROWNS",
+    "qty": 1.0,
+    "cost_price": 6000.0
+  },
+  {
+    "category": "SALUD/BELLEZA",
+    "name": "MAQUINA DE PELO DE BEBE",
+    "qty": 1.0,
+    "cost_price": 11500.0
+  },
+  {
+    "category": "HOGAR",
+    "name": "TERMO PEABODY",
+    "qty": 1.0,
+    "cost_price": 45000.0
+  },
+  {
+    "category": "ACCESORIOS",
+    "name": "MAQUINA DE BOXEO",
+    "qty": 1.0,
+    "cost_price": 38000.0
+  },
+  {
+    "category": "ACCESORIOS",
+    "name": "RELOJ NFC",
+    "qty": 1.0,
+    "cost_price": 0
+  },
+  {
+    "category": "ACCESORIOS",
+    "name": "ASPIRADORA PORTATIL",
+    "qty": 1.0,
+    "cost_price": 9500.0
+  },
+  {
+    "category": "BAZAR",
+    "name": "VASOS CERVECEROS",
+    "qty": 18.0,
+    "cost_price": 5500.0
+  },
+  {
+    "category": "ILUMINACION",
+    "name": "REFLECTOR 50W RGB",
+    "qty": 2.0,
+    "cost_price": 7100.0
+  },
+  {
+    "category": "ACCESORIOS",
+    "name": "SOPORTE ARTICULADO",
+    "qty": 3.0,
+    "cost_price": 4500.0
+  },
+  {
+    "category": "HERRAMIENTA",
+    "name": "CAJA DE HERAMIENTAS",
+    "qty": 1.0,
+    "cost_price": 165000.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "JBL GO 4",
+    "qty": 1.0,
+    "cost_price": 60000.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "JBL FLIP 6",
+    "qty": 2.0,
+    "cost_price": 122700.0
+  },
+  {
+    "category": "TELEFONIA",
+    "name": "SAMSUNG A06",
+    "qty": 1.0,
+    "cost_price": 143000.0
+  },
+  {
+    "category": "ILUMINACION",
+    "name": "TIRAS LED RGB",
+    "qty": 5.0,
+    "cost_price": 6800.0
+  },
+  {
+    "category": "ILUMINACION",
+    "name": "LUZ DE NEON",
+    "qty": 3.0,
+    "cost_price": 7500.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "EP-2112 PARLANTE ECOPOWER",
+    "qty": 2.0,
+    "cost_price": 17000.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "EP-2502 PARLANTE ECOPOWER",
+    "qty": 1.0,
+    "cost_price": 18698.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "EP-2384 PARLANTE ECOPOWER",
+    "qty": 1.0,
+    "cost_price": 16783.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "GREATNICE GTS 1681",
+    "qty": 1.0,
+    "cost_price": 10000.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "GTS-1942 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 10500.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "GTS-1835 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 10500.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "MS-2207 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 8000.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "HYTOSHY-1302 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 9500.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "HF-186 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 8000.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "GTS-2166 PARLANTES",
+    "qty": 1.0,
+    "cost_price": 10166.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "PARLANTE G",
+    "qty": 2.0,
+    "cost_price": 8000.0
+  },
+  {
+    "category": "ACCESORIOS",
+    "name": "PIZARRA MAGICA",
+    "qty": 3.0,
+    "cost_price": 3160.0
+  },
+  {
+    "category": "CELULARES",
+    "name": "JOYSTOCK P CELULAR",
+    "qty": 7.0,
+    "cost_price": 3500.0
+  },
+  {
+    "category": "SEGURIDAD",
+    "name": "CAMARA SEGURIDAD INTERIOR",
+    "qty": 1.0,
+    "cost_price": 33000.0
+  },
+  {
+    "category": "PARLANTES",
+    "name": "ECOPOWER 2266",
+    "qty": 1.0,
+    "cost_price": 68000.0
+  },
+  {
+    "category": "CARGADORES",
+    "name": "BATTERYPACK",
+    "qty": 10.0,
+    "cost_price": 18200.0
+  }
+]
