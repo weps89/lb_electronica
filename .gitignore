@@ -3,6 +3,7 @@ client/dist/
 server/bin/
 server/obj/
 publish/
+artifacts/
 *.db
 *.db-shm
 *.db-wal

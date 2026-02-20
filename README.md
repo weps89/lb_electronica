@@ -51,6 +51,42 @@ On first run, DB is created and seeded with:
 3. Open from Admin PC:
 - `http://localhost:5080`
 
+## Windows Installer (.exe)
+You can generate a full Windows installer that includes frontend + backend self-contained (no .NET runtime needed on target PC).
+
+1. Prerequisites on build machine:
+- .NET SDK 8
+- Node.js 20+
+- Inno Setup 6 (optional, only to produce the final setup `.exe`)
+
+2. Generate package + installer:
+```powershell
+.\build-windows-installer.ps1 -Version 1.0.0
+```
+
+3. Output:
+- Portable app folder: `artifacts/win-installer/app`
+- Installer (if Inno Setup installed): `artifacts/win-installer/LB-Electronica-Setup-<version>.exe`
+
+4. After install (on Windows target):
+- Use shortcut `Iniciar LB Electronica`
+- Open `http://localhost:5080`
+- Default credentials on first run:
+  - user: `admin`
+  - password: `admin123!`
+
+### Installer includes (for easier/no-error setup)
+- Self-contained backend (`win-x64`) so target PC does not need .NET installed.
+- Frontend already embedded in `wwwroot`.
+- Start/Stop shortcuts.
+- Optional automatic setup tasks during install:
+  - Enable Windows Firewall rule for LAN on port `5080`.
+  - Create auto-start task on Windows logon.
+- Diagnostics script included:
+```powershell
+powershell -ExecutionPolicy Bypass -File .\diagnose-lb-electronica.ps1
+```
+
 ## LAN Usage (2 PCs)
 - PC1 (Admin) hosts server using `run-prod.ps1`.
 - Find PC1 LAN IP (example `192.168.1.10`) with `ipconfig`.
