@@ -2,6 +2,7 @@ using LBElectronica.Server.Data;
 using LBElectronica.Server.Services;
 using LBElectronica.Server.Models;
 using Microsoft.EntityFrameworkCore;
+using System.Security.Claims;
 
 namespace LBElectronica.Server.Endpoints;
 
@@ -241,6 +242,8 @@ public static class ReportEndpoints
             var sales = (await db.Sales.Where(x => x.Date >= start && x.Date <= end && (x.Status == SaleStatus.Paid || x.Status == SaleStatus.Verified)).Select(x => x.Total).ToListAsync()).Sum();
             var incomes = (await db.CashMovements.Where(x => x.CreatedAt >= start && x.CreatedAt <= end && x.Type == CashMovementType.Income).Select(x => x.Amount).ToListAsync()).Sum();
             var expenses = (await db.CashMovements.Where(x => x.CreatedAt >= start && x.CreatedAt <= end && x.Type == CashMovementType.Expense).Select(x => x.Amount).ToListAsync()).Sum();
+            var generatedBy = ctx.User.Identity?.Name ?? "admin";
+            var role = ctx.User.FindFirstValue(ClaimTypes.Role) ?? "-";
 
             var bytes = pdf.SalesSummary("Resumen de Ingresos/Gastos", new List<(string Label, decimal Amount)>
             {
@@ -248,7 +251,7 @@ public static class ReportEndpoints
                 ("Ingresos de caja", incomes),
                 ("Gastos", expenses),
                 ("Flujo neto", sales + incomes - expenses)
-            }, start, end, ctx.User.Identity?.Name ?? "admin");
+            }, start, end, generatedBy, role, $"preset={preset ?? "-"}");
 
             return Results.File(bytes, "application/pdf", "resumen-ingresos-gastos.pdf");
         });
@@ -269,7 +272,9 @@ public static class ReportEndpoints
                 .OrderByDescending(x => x[0])
                 .ToList();
 
-            var bytes = pdf.TableReport("Detalle de Ingresos/Gastos", new() { "Fecha", "Tipo", "Referencia", "Monto" }, rows, start, end, ctx.User.Identity?.Name ?? "admin");
+            var generatedBy = ctx.User.Identity?.Name ?? "admin";
+            var role = ctx.User.FindFirstValue(ClaimTypes.Role) ?? "-";
+            var bytes = pdf.TableReport("Detalle de Ingresos/Gastos", new() { "Fecha", "Tipo", "Referencia", "Monto" }, rows, start, end, generatedBy, role, $"preset={preset ?? "-"}", "Finance");
             return Results.File(bytes, "application/pdf", "detalle-ingresos-gastos.pdf");
         });
 
@@ -309,7 +314,9 @@ public static class ReportEndpoints
             rows.Add(new() { "", "Gastos", "", expenses.ToString("N2") });
             rows.Add(new() { "", "Utilidad neta", "", net.ToString("N2") });
 
-            var bytes = pdf.TableReport("Reporte de Utilidad", new() { "Fecha", "Ticket", "Venta Neta", "Utilidad" }, rows, start, end, ctx.User.Identity?.Name ?? "admin");
+            var generatedBy = ctx.User.Identity?.Name ?? "admin";
+            var role = ctx.User.FindFirstValue(ClaimTypes.Role) ?? "-";
+            var bytes = pdf.TableReport("Reporte de Utilidad", new() { "Fecha", "Ticket", "Venta Neta", "Utilidad" }, rows, start, end, generatedBy, role, $"preset={preset ?? "-"}", "Finance");
             return Results.File(bytes, "application/pdf", "reporte-utilidad.pdf");
         });
 
@@ -318,14 +325,18 @@ public static class ReportEndpoints
             var (start, end) = dateRangeService.Resolve(startDate, endDate, preset);
             var sales = await db.Sales.Where(x => x.Date >= start && x.Date <= end).OrderByDescending(x => x.Date).ToListAsync();
             var rows = sales.Select(x => new List<string> { x.Date.ToString("dd/MM/yyyy HH:mm"), x.TicketNumber, x.PaymentMethod.ToString(), x.Total.ToString("N2") }).ToList();
-            var bytes = pdf.TableReport("Reporte de Ventas", new() { "Fecha", "Ticket", "Pago", "Total" }, rows, start, end, ctx.User.Identity?.Name ?? "admin");
+            var generatedBy = ctx.User.Identity?.Name ?? "admin";
+            var role = ctx.User.FindFirstValue(ClaimTypes.Role) ?? "-";
+            var bytes = pdf.TableReport("Reporte de Ventas", new() { "Fecha", "Ticket", "Pago", "Total" }, rows, start, end, generatedBy, role, $"preset={preset ?? "-"}", "Sales");
             return Results.File(bytes, "application/pdf", "reporte-ventas.pdf");
         });
 
         group.MapGet("/inventory/pdf", async (AppDbContext db, PdfService pdf, HttpContext ctx) =>
         {
             var products = await db.Products.OrderBy(x => x.Name).ToListAsync();
-            var bytes = pdf.InventoryReport(products, ctx.User.Identity?.Name ?? "admin");
+            var generatedBy = ctx.User.Identity?.Name ?? "admin";
+            var role = ctx.User.FindFirstValue(ClaimTypes.Role) ?? "-";
+            var bytes = pdf.InventoryReport(products, generatedBy, role, "current=true");
             return Results.File(bytes, "application/pdf", "reporte-inventario.pdf");
         });
 
@@ -336,7 +347,9 @@ public static class ReportEndpoints
             var rows = movements.Select(x => (x.CreatedAt, x.Reason, x.Type == CashMovementType.Income ? x.Amount : 0m, x.Type == CashMovementType.Expense ? x.Amount : 0m)).ToList();
             var totalIncome = rows.Sum(x => x.Item3);
             var totalExpense = rows.Sum(x => x.Item4);
-            var bytes = pdf.CashReport(start, end, rows, totalIncome, totalExpense, totalIncome - totalExpense, ctx.User.Identity?.Name ?? "admin");
+            var generatedBy = ctx.User.Identity?.Name ?? "admin";
+            var role = ctx.User.FindFirstValue(ClaimTypes.Role) ?? "-";
+            var bytes = pdf.CashReport(start, end, rows, totalIncome, totalExpense, totalIncome - totalExpense, generatedBy, role, $"preset={preset ?? "-"}");
             return Results.File(bytes, "application/pdf", "reporte-caja.pdf");
         });
 
@@ -357,7 +370,9 @@ public static class ReportEndpoints
                     ((x.Qty * x.UnitPrice) - x.Discount).ToString("N2")
                 })
                 .ToListAsync();
-            var bytes = pdf.TableReport("Reporte Detallado de Ventas", new() { "Fecha", "Ticket", "Producto", "Categoría", "Cant.", "Precio", "Total" }, rows, start, end, ctx.User.Identity?.Name ?? "admin");
+            var generatedBy = ctx.User.Identity?.Name ?? "admin";
+            var role = ctx.User.FindFirstValue(ClaimTypes.Role) ?? "-";
+            var bytes = pdf.TableReport("Reporte Detallado de Ventas", new() { "Fecha", "Ticket", "Producto", "Categoría", "Cant.", "Precio", "Total" }, rows, start, end, generatedBy, role, $"preset={preset ?? "-"}", "Sales");
             return Results.File(bytes, "application/pdf", "reporte-ventas-detallado.pdf");
         });
 
@@ -374,7 +389,9 @@ public static class ReportEndpoints
                 i.FinalUnitCostUsd.ToString("N2"),
                 i.FinalUnitCostArs.ToString("N2")
             }).ToList();
-            var bytes = pdf.TableReport($"Reporte de Lote {batchCode}", new() { "Producto", "Categoría", "Cantidad", "Costo Final USD", "Costo Final ARS" }, rows, lot.Date, lot.Date, ctx.User.Identity?.Name ?? "admin");
+            var generatedBy = ctx.User.Identity?.Name ?? "admin";
+            var role = ctx.User.FindFirstValue(ClaimTypes.Role) ?? "-";
+            var bytes = pdf.TableReport($"Reporte de Lote {batchCode}", new() { "Producto", "Categoría", "Cantidad", "Costo Final USD", "Costo Final ARS" }, rows, lot.Date, lot.Date, generatedBy, role, $"lot={batchCode}", "Stock");
             return Results.File(bytes, "application/pdf", $"reporte-lote-{batchCode}.pdf");
         });
 
@@ -393,7 +410,9 @@ public static class ReportEndpoints
                 .ToListAsync();
 
             var rows = cancelledSales.Concat(stockAdjust).OrderByDescending(x => x[0]).ToList();
-            var bytes = pdf.TableReport("Reporte de Anulaciones", new() { "Fecha", "Tipo", "Referencia", "Motivo" }, rows, start, end, ctx.User.Identity?.Name ?? "admin");
+            var generatedBy = ctx.User.Identity?.Name ?? "admin";
+            var role = ctx.User.FindFirstValue(ClaimTypes.Role) ?? "-";
+            var bytes = pdf.TableReport("Reporte de Anulaciones", new() { "Fecha", "Tipo", "Referencia", "Motivo" }, rows, start, end, generatedBy, role, $"preset={preset ?? "-"}", "Finance");
             return Results.File(bytes, "application/pdf", "reporte-anulaciones.pdf");
         });
 
@@ -436,7 +455,9 @@ public static class ReportEndpoints
             rows.Add(new() { "", "CAPITAL RECUPERADO", "", capitalRecovered.ToString("N2") });
             rows.Add(new() { "", "GASTOS", "", expenses.ToString("N2") });
             rows.Add(new() { "", "UTILIDAD NETA", "", (gross - expenses).ToString("N2") });
-            var bytes = pdf.TableReport("Reporte de Utilidades (Mensual)", new() { "Fecha", "Ticket", "Venta Neta", "Utilidad" }, rows, start, end, ctx.User.Identity?.Name ?? "admin");
+            var generatedBy = ctx.User.Identity?.Name ?? "admin";
+            var role = ctx.User.FindFirstValue(ClaimTypes.Role) ?? "-";
+            var bytes = pdf.TableReport("Reporte de Utilidades (Mensual)", new() { "Fecha", "Ticket", "Venta Neta", "Utilidad" }, rows, start, end, generatedBy, role, $"year={y},month={m}", "Finance");
             return Results.File(bytes, "application/pdf", "reporte-utilidades-mensual.pdf");
         });
 

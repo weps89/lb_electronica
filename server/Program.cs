@@ -19,6 +19,7 @@ builder.Services.AddScoped<JwtService>();
 builder.Services.AddScoped<AuditService>();
 builder.Services.AddScoped<DbInitializer>();
 builder.Services.AddScoped<CodeService>();
+builder.Services.AddScoped<PdfReportService>();
 builder.Services.AddScoped<PdfService>();
 builder.Services.AddScoped<ReceiptService>();
 builder.Services.AddScoped<DateRangeService>();

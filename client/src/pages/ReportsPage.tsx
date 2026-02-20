@@ -3,7 +3,7 @@ import { useQuery } from '@tanstack/react-query';
 import { http } from '../api/http';
 import { formatInt, formatMoney, formatQty } from '../lib/numberFormat';
 
-type ReportType = 'cash' | 'sales-detailed' | 'lot' | 'annulments' | 'utilities-monthly';
+type ReportType = 'cash' | 'sales-detailed' | 'lot' | 'annulments' | 'utilities-monthly' | 'inventory';
 const MONTH_OPTIONS = [
   { value: 1, label: 'ENERO' },
   { value: 2, label: 'FEBRERO' },
@@ -36,6 +36,7 @@ export function ReportsPage() {
   const salesDetailed = useQuery({ queryKey: ['r-sales-detail', dateQuery], queryFn: () => http<any>(`/api/reports/sales-detailed${dateQuery}`), enabled: type === 'sales-detailed' });
   const annulments = useQuery({ queryKey: ['r-annulments', dateQuery], queryFn: () => http<any>(`/api/reports/annulments${dateQuery}`), enabled: type === 'annulments' });
   const utilities = useQuery({ queryKey: ['r-utilities', year, month], queryFn: () => http<any>(`/api/reports/utilities-monthly?year=${year}&month=${month}`), enabled: type === 'utilities-monthly' });
+  const inventory = useQuery({ queryKey: ['r-inventory'], queryFn: () => http<any>('/api/reports/inventory'), enabled: type === 'inventory' });
   const lot = useQuery({ queryKey: ['r-lot', lotId], queryFn: () => http<any>(`/api/reports/lot/${lotId}`), enabled: type === 'lot' && !!lotId });
   const lots = useQuery({ queryKey: ['r-lot-options'], queryFn: () => http<any[]>('/api/stock/lots'), enabled: type === 'lot' });
 
@@ -56,13 +57,14 @@ export function ReportsPage() {
           <select className="input" value={type} onChange={(e) => setType(e.target.value as ReportType)}>
             <option value="cash">Reporte de Caja</option>
             <option value="sales-detailed">Reporte Detallado de Ventas</option>
+            <option value="inventory">Reporte de Inventario / Existencias</option>
             <option value="lot">Reporte de Lote</option>
             <option value="annulments">Reporte de Anulaciones</option>
             <option value="utilities-monthly">Reporte de Utilidades (Mensual)</option>
           </select>
         </div>
 
-        {type !== 'lot' && type !== 'utilities-monthly' && (
+        {type !== 'lot' && type !== 'utilities-monthly' && type !== 'inventory' && (
           <>
             <div>
               <label className="text-xs text-slate-600">Preset</label>
@@ -103,6 +105,46 @@ export function ReportsPage() {
           </>
         )}
       </div>
+
+      {type === 'inventory' && (
+        <div className="card space-y-3">
+          <div className="flex items-center justify-between">
+            <h2 className="font-semibold">Inventario / Control de Existencias</h2>
+            <a className="btn-secondary" href="/api/reports/inventory/pdf" target="_blank">Exportar PDF</a>
+          </div>
+          <div className="grid md:grid-cols-3 gap-2">
+            <div className="rounded-xl border border-slate-200 bg-slate-50 p-3">
+              <div className="text-xs uppercase tracking-wide text-slate-600">Total productos</div>
+              <div className="text-2xl font-semibold">{formatInt(inventory.data?.items?.length)}</div>
+            </div>
+            <div className="rounded-xl border border-amber-200 bg-amber-50 p-3">
+              <div className="text-xs uppercase tracking-wide text-amber-700">Stock bajo</div>
+              <div className="text-2xl font-semibold text-amber-900">{formatInt(inventory.data?.lowStock?.length)}</div>
+            </div>
+            <div className="rounded-xl border border-sky-200 bg-sky-50 p-3">
+              <div className="text-xs uppercase tracking-wide text-sky-700">Valuación a costo</div>
+              <div className="text-2xl font-semibold text-sky-900">USD {formatMoney(inventory.data?.stockValuationCost)}</div>
+            </div>
+          </div>
+          <div className="overflow-auto border rounded max-h-[560px]">
+            <table className="table">
+              <thead><tr><th>Código</th><th>Producto</th><th>Categoría</th><th>Stock</th><th>Mínimo</th><th>Alerta</th></tr></thead>
+              <tbody>
+                {inventory.data?.items?.map((p: any) => (
+                  <tr key={p.id}>
+                    <td>{p.internalCode}</td>
+                    <td>{p.name}</td>
+                    <td>{p.category || '-'}</td>
+                    <td>{formatQty(p.stockQuantity)}</td>
+                    <td>{formatQty(p.stockMinimum)}</td>
+                    <td>{Number(p.stockQuantity) <= Number(p.stockMinimum) ? 'Bajo' : 'OK'}</td>
+                  </tr>
+                ))}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      )}
 
       {type === 'cash' && (
         <div className="card space-y-3">
