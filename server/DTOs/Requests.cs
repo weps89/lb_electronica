@@ -60,3 +60,4 @@ public record DateRangeQuery(DateTime? StartDate, DateTime? EndDate, string? Pre
 public record ManualAdjustStockRequest(int ProductId, decimal Qty, string Notes);
 public record StockOutRequest(int ProductId, decimal Qty, string Reason);
 public record ExchangeRateRequest(decimal ArsPerUsd);
+public record BackupCloudConfigRequest(string Provider, string RemoteName, string RemoteFolder, int KeepLocalDays, int KeepRemoteDays, string ScheduleAt, bool Enabled);
