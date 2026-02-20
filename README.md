@@ -87,6 +87,40 @@ You can generate a full Windows installer that includes frontend + backend self-
 powershell -ExecutionPolicy Bypass -File .\diagnose-lb-electronica.ps1
 ```
 
+## Ubuntu Installer (tar.gz + systemd)
+You can also generate an Ubuntu package that installs the app as a system service.
+
+1. Prerequisites on build machine:
+- .NET SDK 8
+- Node.js 20+
+
+2. Generate Ubuntu package:
+```bash
+./build-ubuntu-installer.sh 1.0.0
+```
+
+3. Output:
+- `artifacts/ubuntu-installer/lb-electronica-1.0.0-ubuntu-linux-x64.tar.gz`
+
+4. Install on Ubuntu target:
+```bash
+tar -xzf lb-electronica-1.0.0-ubuntu-linux-x64.tar.gz
+cd lb-electronica-1.0.0-ubuntu-linux-x64
+sudo ./install.sh
+```
+
+5. Service management:
+```bash
+sudo systemctl status lb-electronica
+sudo systemctl restart lb-electronica
+sudo systemctl stop lb-electronica
+```
+
+6. Diagnostic:
+```bash
+./diagnose-lb-electronica.sh
+```
+
 ## LAN Usage (2 PCs)
 - PC1 (Admin) hosts server using `run-prod.ps1`.
 - Find PC1 LAN IP (example `192.168.1.10`) with `ipconfig`.

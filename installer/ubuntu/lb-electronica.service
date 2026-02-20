@@ -1,0 +1,16 @@
+[Unit]
+Description=LB Electronica Service
+After=network.target
+
+[Service]
+Type=simple
+WorkingDirectory={{APP_DIR}}
+ExecStart={{APP_DIR}}/LBElectronica.Server --urls http://0.0.0.0:{{PORT}}
+Restart=always
+RestartSec=3
+User=lbapp
+Group=lbapp
+Environment=ASPNETCORE_ENVIRONMENT=Production
+
+[Install]
+WantedBy=multi-user.target
