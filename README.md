@@ -64,6 +64,49 @@ On first run, DB is created and seeded with:
   - `POST /api/system/backup`
   - Creates timestamped copy under `backups/`.
 
+## Cloud Backup (Free, Google Drive)
+Recommended free option: **Google Drive (15GB)** with `rclone`.
+
+### 1) Install rclone (Windows)
+- Download: https://rclone.org/downloads/
+- Verify in PowerShell:
+```powershell
+rclone version
+```
+
+### 2) Configure Google Drive remote
+```powershell
+rclone config
+```
+Create remote name `gdrive` (or your preferred name), authenticate with Google account.
+
+### 3) Run manual backup + cloud upload
+```powershell
+.\scripts\backup-cloud.ps1 -RemoteName gdrive -RemoteFolder "LBElectronica/backups"
+```
+
+### 4) Schedule automatic daily backup
+```powershell
+.\scripts\install-backup-task.ps1 -TaskName "LBElectronica-CloudBackup-Daily" -RunAt "22:00" -RemoteName gdrive -RemoteFolder "LBElectronica/backups"
+```
+
+### 5) Restore backup (local zip)
+```powershell
+.\scripts\restore-backup.ps1 -BackupZipPath "C:\ruta\archivo.zip"
+```
+
+### 6) Restore latest backup directly from cloud
+```powershell
+.\scripts\restore-backup.ps1 -FetchLatestFromCloud -RemoteName gdrive -RemoteFolder "LBElectronica/backups"
+```
+
+Notes:
+- For restore, keep server stopped and then restart it after restore.
+- Backups include `lb_electronica.db` and WAL files when present.
+- Default retention:
+  - Local zip backups: 30 days
+  - Remote backups: 90 days
+
 ## Security Notes
 - Password hashing via BCrypt.
 - Role-based endpoint protections:
